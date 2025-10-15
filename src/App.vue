@@ -17,6 +17,27 @@ onMounted(() => {
     })
   })
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.getElementById("navbar");
+  const sentinel = document.getElementById("navbar-sentinel");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const entry = entries[0];
+      if (!entry.isIntersecting) {
+        // artinya navbar udah nempel (sticky aktif)
+        navbar.classList.add("shadow-md");
+      } else {
+        // masih belum nempel di atas
+        navbar.classList.remove("shadow-md");
+      }
+    },
+    { rootMargin: "-1px 0px 0px 0px", threshold: 0 }
+  );
+
+  observer.observe(sentinel);
+});
 </script>
 
 <template>
@@ -38,15 +59,15 @@ onMounted(() => {
           </div>
           <p class="font-secondary text-whitey text-3xl">Naturally Sweet, Beautifully Healthy</p>
         </div>
-        <div
-          class=" aspect-square w-md bg-[url('/img/donutMaskot.png')] bg-center bg-contain bg-no-repeat rounded-[5rem]">
+        <div class=" aspect-square w-md bg-[url('/img/donutMaskot.png')] bg-center bg-contain bg-no-repeat">
         </div>
       </div>
 
     </div>
 
     <!-- bar -->
-    <div class="h-18 sticky top-0 flex bg-whitey z-50 mt-2">
+    <div id="navbar-sentinel"></div>
+    <div id="navbar" class="h-18 sticky top-0 flex bg-whitey z-50 mt-2 transition-all duration-1000 ease-in-out">
       <div class="max-w-screen-xl m-auto w-full flex justify-between px-10 font-secondary">
         <img src="/img/donutMaskotPurple.png" alt="" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
           class="my-auto h-auto w-12 cursor-pointer">
@@ -176,7 +197,8 @@ onMounted(() => {
           class="bg-whitey rounded-2xl py-6 px-8 flex flex-col gap-2 relative shadow-reasons hover:shadow-reasons-hover hover:-translate-0.5 transition-all ease-in-out duration-300 cursor-default hover:z-40">
           <div class="absolute inset-0 bg-[url('/pattern/linePatternPurple.png')] bg-cover bg-center opacity-10 z-0">
           </div>
-          <img src="/img/reasonHealthy.png" alt="" class="absolute aspect-auto w-26 -top-6 -right-10 rotate-12 drop-shadow-xs/50">
+          <img src="/img/reasonHealthy.png" alt=""
+            class="absolute aspect-auto w-26 -top-6 -right-10 rotate-12 drop-shadow-xs/50">
 
           <p class="font-bold text-center text-xl leading-7">Healthy <br>Indulgence</p>
           <p class=" text-justify text-sm z-10">Low sugar, preservative free, and baked for a lighter treat</p>
@@ -187,7 +209,8 @@ onMounted(() => {
           class="bg-whitey rounded-2xl py-6 px-8 flex flex-col gap-2 relative shadow-reasons hover:shadow-reasons-hover hover:-translate-0.5 transition-all ease-in-out duration-300 cursor-default hover:z-40">
           <div class="absolute inset-0 bg-[url('/pattern/linePatternPurple.png')] bg-cover bg-center opacity-10 z-0">
           </div>
-          <img src="/img/reasonBlue.png" alt="" class="absolute aspect-auto w-26 -top-8 -right-11 -rotate-12 drop-shadow-xs/50">
+          <img src="/img/reasonBlue.png" alt=""
+            class="absolute aspect-auto w-26 -top-8 -right-11 -rotate-12 drop-shadow-xs/50">
 
           <p class="font-bold text-center text-xl leading-7">Blue Magic <br>Aesthetic</p>
           <p class=" text-justify text-sm z-10">Naturally blue from butterfly pea extract, beautiful and beneficial</p>
@@ -198,7 +221,8 @@ onMounted(() => {
           class="bg-whitey rounded-2xl py-6 px-8 flex flex-col gap-2 relative shadow-reasons hover:shadow-reasons-hover hover:-translate-0.5 transition-all ease-in-out duration-300 cursor-default hover:z-40">
           <div class="absolute inset-0 bg-[url('/pattern/linePatternPurple.png')] bg-cover bg-center opacity-10 z-0">
           </div>
-          <img src="/img/reasonPrice.png" alt="" class="absolute aspect-auto w-30 -top-10 -right-10 rotate-12 drop-shadow-xs/50">
+          <img src="/img/reasonPrice.png" alt=""
+            class="absolute aspect-auto w-30 -top-10 -right-10 rotate-12 drop-shadow-xs/50">
 
           <p class="font-bold text-center text-xl leading-7">Student-Friendly <br>Price</p>
           <p class=" text-justify text-sm z-10">Premium quality that fits a student’s budget</p>
@@ -209,7 +233,8 @@ onMounted(() => {
           class="bg-whitey rounded-2xl py-6 px-8 flex flex-col gap-2 relative shadow-reasons hover:shadow-reasons-hover hover:-translate-0.5 transition-all ease-in-out duration-300 cursor-default">
           <div class="absolute inset-0 bg-[url('/pattern/linePatternPurple.png')] bg-cover bg-center opacity-10 z-0">
           </div>
-          <img src="/img/reasonLocal.png" alt="" class="absolute aspect-auto w-22 -top-5 -right-8 rotate-6 drop-shadow-xs/50">
+          <img src="/img/reasonLocal.png" alt=""
+            class="absolute aspect-auto w-22 -top-5 -right-8 rotate-6 drop-shadow-xs/50">
 
           <p class="font-bold text-center text-xl leading-7">Local <br>Production</p>
           <p class=" text-justify text-sm z-10">Crafted by Indonesian students, made from local ingredients</p>
