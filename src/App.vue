@@ -99,7 +99,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <p class="font-secondary text-whitey text-xl sm:text-xl md:text-lg">Naturally Sweet, Beautifully Healthy</p>
         </div>
         <div
-          class="aspect-square w-60 lg:w-88 bg-[url('/img/donutMaskot.png')] bg-center bg-contain bg-no-repeat self-center">
+          class="aspect-square w-74 lg:w-88 bg-[url('/img/donutMaskot.png')] bg-center bg-contain bg-no-repeat self-center">
         </div>
       </div>
 
@@ -195,14 +195,14 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
     <!-- products header -->
     <div class="min-h-screen flex flex-col">
       <h2 id="product"
-        class="text-primary mx-auto text-4xl lg:text-6xl mt-40 scroll-mt-20 lg:scroll-mt-30 font-semibold">Our Products
+        class="text-primary mx-auto text-4xl lg:text-6xl mt-20 scroll-mt-20 lg:scroll-mt-30 font-semibold">Our Products
       </h2>
 
       <!-- container products -->
-      <div class="max-w-screen-lg m-auto">
+      <div class="max-w-screen-lg m-auto hidden lg:flex">
 
         <div
-          class="mt-12 mx-10 rounded-4xl bg-gradient-to-b from-primary to-secondary relative overflow-hidden shadow-products-container hidden lg:block">
+          class="mt-12 mx-10 rounded-4xl bg-gradient-to-b from-primary to-secondary relative overflow-hidden shadow-products-container">
           <div class="absolute inset-0 bg-[url('/pattern/linePattern.png')] bg-cover bg-bottom opacity-10 z-0"></div>
 
           <p class=" text-center font-secondary mt-10 text-5xl">All Variants only 7K</p>
@@ -269,7 +269,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
       </div>
 
       <!-- slider -->
-      <section class="block lg:hidden">
+      <section class="flex lg:hidden">
         <Swiper :modules="[Pagination, Navigation, Autoplay]" :slides-per-view="1" :space-between="50" :loop="true"
           :autoplay="{ delay: 3500, disableOnInteraction: false }" pagination class="mySwiper w-full">
           <!-- Slide 1 -->
@@ -284,7 +284,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
                 <!-- gambar donut -->
                 <img src="/img/donut1.png" alt=""
-                  class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25">
+                  class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
                 <p class="font-secondary text-center text-base">Topping: Pistachio</p>
               </div>
@@ -304,7 +304,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
                 <p class="text-4xl text-center">Pandan <br>Butterfly</p>
 
                 <img src="/img/donut2.png" alt=""
-                  class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:-rotate-6 group-hover:scale-105 group-hover:-rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25">
+                  class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:-rotate-6 group-hover:scale-105 group-hover:-rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
                 <p class="font-secondary text-center text-base">Topping: Coconut, Chia seed</p>
               </div>
@@ -324,7 +324,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
                 <p class="text-4xl text-center">Signature <br>Butterfly</p>
 
                 <img src="/img/donut3.png" alt=""
-                  class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25">
+                  class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
                 <p class="font-secondary text-center text-base">Topping: Almond, Chia seed</p>
               </div>
@@ -344,7 +344,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
                 <p class="text-4xl text-center">Chocolate <br>Butterfly</p>
 
                 <img src="/img/donut4.png" alt=""
-                  class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25">
+                  class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
                 <p class="font-secondary text-center text-base">Topping: Sprinkle</p>
               </div>
@@ -359,7 +359,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
 
     <!-- why choose us -->
-    <div class=" bg-gradient-to-b from-whitey to-secondary mt-40 px-5 flex flex-col">
+    <div class=" bg-gradient-to-b from-whitey to-secondary mt-0 lg:mt-40 px-5 flex flex-col">
       <p id="reason"
         class="font-primary text-blackey text-center text-4xl lg:text-5xl font-semibold scroll-mt-20 lg:scroll-mt-30">
         Why Choose
@@ -464,7 +464,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
     </div>
 
     <!-- team -->
-    <div class=" bg-gradient-to-b from-secondary to-primary pt-40 lg:pt-60 px-10 relative lg:flex lg:flex-col">
+    <div class=" bg-gradient-to-b from-secondary to-primary pt-30 lg:pt-60 px-10 relative lg:flex lg:flex-col">
 
       <p id="team" class=" text-center text-3xl lg:text-4xl scroll-mt-20 lg:scroll-mt-30">The Sweet Souls Behind BluePea
         Bites</p>
@@ -530,7 +530,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
       </div>
     </div>
 
-    <div class="bg-primary pt-60 text-right px-10 pb-60 flex flex-col">
+    <div class="bg-primary pt-40 lg:pt-60 text-right px-10 pb-40 lg:pb-60 flex flex-col">
       <div class="lg:max-w-screen-lg lg:m-auto lg:w-full">
 
 
