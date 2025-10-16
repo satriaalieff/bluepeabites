@@ -538,10 +538,10 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
         <div class="flex font-secondary text-md lg:text-xl">
           <button
-            class="grow ring rounded-xl cursor-pointer h-14 lg:h-20 hover:bg-whitey active:bg-whitey group transition-all ease-in-out duration-100"
+            class="grow ring-3 rounded-xl cursor-pointer h-14 lg:h-20 hover:bg-whitey active:bg-whitey group transition-all ease-in-out duration-100"
             onclick="window.open('https://wa.me/628997065303', '_blank')">
             <span
-              class="group-hover:bg-gradient-to-br group-active:bg-gradient-to-br group-hover:from-primary group-active:from-primary group-hover:to-secondary group-active:to-secondary group-hover:bg-clip-text group-active:bg-clip-text group-hover:text-transparent group-active:text-transparent transition-all ease-out duration-1000 dura">Bites
+              class="group-hover:bg-gradient-to-br group-active:bg-gradient-to-br group-hover:from-primary group-active:from-primary group-hover:to-secondary group-active:to-secondary group-hover:bg-clip-text group-active:bg-clip-text group-hover:text-transparent group-active:text-transparent transition-all ease-in-out duration-1000">Bites
               First, Think Later</span>
           </button>
         </div>
