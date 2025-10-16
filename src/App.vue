@@ -129,8 +129,6 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
     <!-- bar -->
     <div id="navbarsmall" class="fixed top-4 right-4 z-50 shadow-none lg:hidden">
       <div class="m-auto flex justify-between font-secondary">
-        <img src="/img/donutMaskotPurple.png" alt="" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-          class="my-auto h-auto w-12 cursor-pointer hidden">
         <img src="/img/donutMaskotPurple.png" alt="menu"
           class="w-12 cursor-pointer fixed top-5 right-5 z-50 hover:animate-spin active:animate-spin"
           @click="toggleMenu" />
@@ -140,7 +138,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           class="fixed inset-0 flex flex-col justify-center items-center gap-20 transition-all duration-500 ease-in-out overflow-hidden"
           :class="menuOpen ? 'translate-y-0' : '-translate-y-full'">
           <!-- Lapisan blur di belakang -->
-          <div class="absolute inset-0 bg-gradient-to-br from-primary/50 to-secondary/50 backdrop-blur-lg"></div>
+          <div class="absolute inset-0 bg-gradient-to-br from-primary/95 to-secondary/95"></div>
 
           <div class="relative z-10 flex flex-col items-center gap-24">
             <a href="#product"
@@ -195,7 +193,8 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
     <!-- products header -->
     <div class="min-h-screen flex flex-col">
       <h2 id="product"
-        class="text-primary mx-auto text-4xl lg:text-6xl mt-20 scroll-mt-20 lg:scroll-mt-30 font-semibold">Our Products
+        class="text-primary mx-auto text-4xl lg:text-6xl mt-20 scroll-mt-20 lg:scroll-mt-30 font-semibold lg:mt-40">Our
+        Products
       </h2>
 
       <!-- container products -->
