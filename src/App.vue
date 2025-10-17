@@ -569,15 +569,15 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
               <span class="icon-[ic--baseline-email] scale-110 cursor-pointer"></span>
               <p>bluepeabites@gmail.com</p>
             </a>
-            <a href="https://instagram.com/bluepeabites" target="_blank" rel="noopener noreferrer"
+            <a href="https://instagram.com/bluepea.bites" target="_blank" rel="noopener noreferrer"
               class="flex items-center gap-2 hover:underline active:underline decoration-wavy decoration-1 underline-offset-2">
               <span class="icon-[mdi--instagram] scale-110 cursor-pointer"></span>
-              <p>@bluepeabites</p>
+              <p>@bluepea.bites</p>
             </a>
-            <a href="https://wa.me/628997065303" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/6281220406031" target="_blank" rel="noopener noreferrer"
               class="flex items-center gap-2 hover:underline active:underline decoration-wavy decoration-1 underline-offset-2">
               <span class="icon-[ic--baseline-whatsapp] scale-110 cursor-pointer"></span>
-              <p>0899-7065-303</p>
+              <p>0812-2040-6031</p>
             </a>
           </div>
         </div>
