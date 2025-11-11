@@ -265,6 +265,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
             <img src="/img/donut4.png" alt=""
               class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:-rotate-6 hover:scale-105 hover:-rotate-6 transition-all ease-in-out duration-750 bottom-4 right-10">
 
+            <p class="absolute font-secondary bottom-10 left-10">*Image just an illustration</p>
             <p class="absolute font-secondary bottom-5 left-10">*Available by pre-order only</p>
           </div>
         </div>
@@ -289,11 +290,12 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
                 <img src="/img/donut3.png" alt=""
                   class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
-                <p class="font-secondary text-center text-base">Topping: Almond, Chia seed</p>
+                <p class="font-secondary text-center text-base">Topping: Telang glaze</p>
 
-                <p class="font-secondary text-center text-4xl font-bold mb-4">Only 7K</p>
+                <p class="font-secondary text-center text-4xl font-bold mb-8">Only 7K</p>
               </div>
 
+              <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
               <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
             </div>
           </SwiperSlide>
@@ -311,11 +313,12 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
                 <img src="/img/donut2.png" alt=""
                   class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:-rotate-6 group-hover:scale-105 group-hover:-rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
-                <p class="font-secondary text-center text-base">Topping: Coconut, Chia seed</p>
+                <p class="font-secondary text-center text-base">Topping: Matcha glaze, Almond</p>
 
-                <p class="font-secondary text-center text-4xl font-bold mb-4">Only 7K</p>
+                <p class="font-secondary text-center text-4xl font-bold mb-8">Only 7K</p>
               </div>
 
+              <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
               <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
             </div>
           </SwiperSlide>
@@ -333,11 +336,12 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
                 <img src="/img/donut4.png" alt=""
                   class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
-                <p class="font-secondary text-center text-base">Topping: Sprinkle</p>
+                <p class="font-secondary text-center text-base">Topping: Chocolate glaze, Regal</p>
 
-                <p class="font-secondary text-center text-4xl font-bold mb-4">Only 7K</p>
+                <p class="font-secondary text-center text-4xl font-bold mb-8">Only 7K</p>
               </div>
 
+              <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
               <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
             </div>
           </SwiperSlide>
@@ -358,9 +362,10 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
                 <p class="font-secondary text-center text-base">Topping: Pistachio</p>
 
-                <p class="font-secondary text-center text-4xl font-bold mb-4">Only 7K</p>
+                <p class="font-secondary text-center text-4xl font-bold mb-8">Only 7K</p>
               </div>
 
+              <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
               <p class="absolute font-secondary text-xs bottom-2 left-6">*Not available yet</p>
             </div>
           </SwiperSlide>
