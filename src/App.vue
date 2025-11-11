@@ -120,7 +120,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
             class="text-blackey text-lg hover:underline hover:underline-offset-6 decoration-wavy decoration-1">Team</a>
           <button
             class="w-24 h-10 rounded-xl bg-primary text-lg shadow-hero-button hover:-translate-0.5 hover:shadow-hero-button-hover transition-all duration-50 cursor-pointer">
-            <a href="https://wa.me/628997065303" target="_blank">Order</a>
+            <a href="https://wa.me/6281220406031" target="_blank">Order</a>
           </button>
         </div>
       </div>
@@ -153,7 +153,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
             <button
               class="w-24 h-10 rounded-xl bg-primary text-lg shadow-hero-button hover:-translate-0.5 hover:shadow-hero-button-hover transition-all duration-50 cursor-pointer hidden">
-              <a href="https://wa.me/628997065303" target="_blank">Order</a>
+              <a href="https://wa.me/6281220406031" target="_blank">Order</a>
             </button>
           </div>
         </div>
@@ -445,7 +445,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
       </div>
       <button
         class="h-40 lg:h-60 w-full flex justify-center hover:bg-whitey active:bg-whitey transition-all ease-in-out duration-100 group relative cursor-pointer"
-        onclick="window.open('https://wa.me/628997065303', '_blank')">
+        onclick="window.open('https://wa.me/6281220406031', '_blank')">
 
         <img src="/img/donutLogo.svg" alt=""
           class="w-28 lg:w-40 absolute h-full animate-bounce transition-opacity duration-100 opacity-100 group-active:opacity-0 group-hover:opacity-0">
@@ -539,7 +539,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <div class="flex font-secondary text-md lg:text-xl">
           <button
             class="grow ring-3 rounded-xl cursor-pointer h-14 lg:h-20 hover:bg-whitey active:bg-whitey group transition-all ease-in-out duration-100"
-            onclick="window.open('https://wa.me/628997065303', '_blank')">
+            onclick="window.open('https://wa.me/6281220406031', '_blank')">
             <span
               class="group-hover:bg-gradient-to-br group-active:bg-gradient-to-br group-hover:from-primary group-active:from-primary group-hover:to-secondary group-active:to-secondary group-hover:bg-clip-text group-active:bg-clip-text group-hover:text-transparent group-active:text-transparent transition-all ease-in-out duration-1000">Bites
               First, Think Later</span>
