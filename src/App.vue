@@ -77,6 +77,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 <template>
   <div class="font-primary box-border bg-whitey text-whitey">
 
+
     <!-- hero -->
     <div class="min-w-full min-h-screen bg-gradient-to-br from-secondary to-primary overflow-hidden flex relative">
 
@@ -120,8 +121,10 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
             class="text-blackey text-lg hover:underline hover:underline-offset-6 decoration-wavy decoration-1">Team</a>
           <button
             class="w-24 h-10 rounded-xl bg-primary text-lg shadow-hero-button hover:-translate-0.5 hover:shadow-hero-button-hover transition-all duration-50 cursor-pointer">
-            <a href="https://wa.me/6281220406031" target="_blank">Order</a>
+            <a href="https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A"
+              target="_blank">Order</a>
           </button>
+
         </div>
       </div>
     </div>
@@ -153,7 +156,8 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
             <button
               class="w-24 h-10 rounded-xl bg-primary text-lg shadow-hero-button hover:-translate-0.5 hover:shadow-hero-button-hover transition-all duration-50 cursor-pointer hidden">
-              <a href="https://wa.me/6281220406031" target="_blank">Order</a>
+              <a href="https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A"
+                target="_blank">Order</a>
             </button>
           </div>
         </div>
@@ -207,28 +211,6 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <p class=" text-center font-secondary mt-10 text-5xl">All Variants only 7K</p>
           <div class="grid grid-cols-3 grid-rows-4 px-4 py-20 gap-y-30 gap-x-4">
 
-            <div class=" col-span-2 bg-whitey rounded-2xl h-30 ml-40 flex z-10 shadow-product-desc">
-              <div
-                class="text-primary font-secondary m-auto pr-4 pl-44 flex flex-col justify-center items-center gap-1.5">
-                <div class="text-2xl text-center leading-[1.75rem]">
-                  A fresh mix of <span class="font-semibold">lemongrass</span> and <span
-                    class="font-semibold">pistachio</span>
-                </div>
-              </div>
-            </div>
-            <p class="text-5xl self-center">Lemon <br>Butterfly</p>
-
-            <p class="text-5xl self-center text-right">Pandan <br>Butterfly</p>
-            <div class="col-span-2 bg-whitey rounded-2xl h-30 mr-40 flex z-10 shadow-product-desc">
-              <div
-                class="text-primary font-secondary m-auto pl-2 pr-44 flex flex-col justify-center items-center gap-2">
-                <div class="text-2xl text-center leading-[1.75rem]">
-                  A classic Indonesian twist with grated <span class="font-semibold">coconut</span> and <span
-                    class="font-semibold">chia</span>
-                </div>
-              </div>
-            </div>
-
             <div class="col-span-2 bg-whitey rounded-2xl h-30 ml-40 flex z-10 shadow-product-desc">
               <div
                 class="text-secondary font-secondary m-auto pr-4 pl-46 flex flex-col justify-center items-center gap-2">
@@ -239,6 +221,28 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
               </div>
             </div>
             <p class="text-5xl self-center">Signature <br>Butterfly</p>
+
+            <p class="text-5xl self-center text-right">Matcha <br>Butterfly</p>
+            <div class="col-span-2 bg-whitey rounded-2xl h-30 mr-40 flex z-10 shadow-product-desc">
+              <div
+                class="text-primary font-secondary m-auto pl-4 pr-46 flex flex-col justify-center items-center gap-2">
+                <div class="text-2xl text-center leading-[1.75rem]">
+                  A classic matcha with grated <span class="font-semibold">coconut</span> and <span
+                    class="font-semibold">chia</span>
+                </div>
+              </div>
+            </div>
+
+            <div class=" col-span-2 bg-whitey rounded-2xl h-30 ml-40 flex z-10 shadow-product-desc">
+              <div
+                class="text-primary font-secondary m-auto pr-4 pl-44 flex flex-col justify-center items-center gap-1.5">
+                <div class="text-2xl text-center leading-[1.75rem]">
+                  A fresh mix of <span class="font-semibold">lemongrass</span> and <span
+                    class="font-semibold">pistachio</span>
+                </div>
+              </div>
+            </div>
+            <p class="text-5xl self-center">Lemon <br>Butterfly</p>
 
             <p class="text-5xl self-center text-right">Chocolate <br>Butterfly</p>
             <div class="col-span-2 bg-whitey rounded-2xl h-30 mr-40 flex z-10 shadow-product-desc">
@@ -252,11 +256,11 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
             </div>
 
             <!-- gambar donut -->
-            <img src="/img/donut1.png" alt=""
+            <img src="/img/donut3.png" alt=""
               class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:rotate-6 hover:scale-105 hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10">
             <img src="/img/donut2.png" alt=""
               class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:-rotate-6 hover:scale-105 hover:-rotate-6 transition-all ease-in-out duration-750 top-90 right-10">
-            <img src="/img/donut3.png" alt=""
+            <img src="/img/donut1.png" alt=""
               class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:rotate-6 hover:scale-105 hover:rotate-6 transition-all ease-in-out duration-750 bottom-64 left-10">
             <img src="/img/donut4.png" alt=""
               class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:-rotate-6 hover:scale-105 hover:-rotate-6 transition-all ease-in-out duration-750 bottom-4 right-10">
@@ -271,6 +275,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
       <section class="flex lg:hidden">
         <Swiper :modules="[Pagination, Navigation, Autoplay]" :slides-per-view="1" :space-between="50" :loop="true"
           :autoplay="{ delay: 3500, disableOnInteraction: false }" pagination class="mySwiper w-full">
+
           <!-- Slide 1 -->
           <SwiperSlide class="pb-10">
             <div
@@ -279,13 +284,14 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
               </div>
 
               <div class="px-6 py-8 flex flex-col gap-4">
-                <p class="text-4xl text-center">Lemon <br>Butterfly</p>
+                <p class="text-4xl text-center">Signature <br>Butterfly</p>
 
-                <!-- gambar donut -->
-                <img src="/img/donut1.png" alt=""
+                <img src="/img/donut3.png" alt=""
                   class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
-                <p class="font-secondary text-center text-base">Topping: Pistachio</p>
+                <p class="font-secondary text-center text-base">Topping: Almond, Chia seed</p>
+
+                <p class="font-secondary text-center text-4xl font-bold mb-4">Only 7K</p>
               </div>
 
               <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
@@ -300,12 +306,14 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
               </div>
 
               <div class="px-6 py-8 flex flex-col gap-4">
-                <p class="text-4xl text-center">Pandan <br>Butterfly</p>
+                <p class="text-4xl text-center">Matcha <br>Butterfly</p>
 
                 <img src="/img/donut2.png" alt=""
                   class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:-rotate-6 group-hover:scale-105 group-hover:-rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
                 <p class="font-secondary text-center text-base">Topping: Coconut, Chia seed</p>
+
+                <p class="font-secondary text-center text-4xl font-bold mb-4">Only 7K</p>
               </div>
 
               <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
@@ -320,12 +328,14 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
               </div>
 
               <div class="px-6 py-8 flex flex-col gap-4">
-                <p class="text-4xl text-center">Signature <br>Butterfly</p>
+                <p class="text-4xl text-center">Chocolate <br>Butterfly</p>
 
-                <img src="/img/donut3.png" alt=""
+                <img src="/img/donut4.png" alt=""
                   class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
-                <p class="font-secondary text-center text-base">Topping: Almond, Chia seed</p>
+                <p class="font-secondary text-center text-base">Topping: Sprinkle</p>
+
+                <p class="font-secondary text-center text-4xl font-bold mb-4">Only 7K</p>
               </div>
 
               <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
@@ -340,19 +350,28 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
               </div>
 
               <div class="px-6 py-8 flex flex-col gap-4">
-                <p class="text-4xl text-center">Chocolate <br>Butterfly</p>
+                <p class="text-4xl text-center">Lemon <br>Butterfly</p>
 
-                <img src="/img/donut4.png" alt=""
+                <!-- gambar donut -->
+                <img src="/img/donut1.png" alt=""
                   class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
-                <p class="font-secondary text-center text-base">Topping: Sprinkle</p>
+                <p class="font-secondary text-center text-base">Topping: Pistachio</p>
+
+                <p class="font-secondary text-center text-4xl font-bold mb-4">Only 7K</p>
               </div>
 
-              <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
+              <p class="absolute font-secondary text-xs bottom-2 left-6">*Not available yet</p>
             </div>
           </SwiperSlide>
         </Swiper>
       </section>
+
+      <button
+        class="fixed w-28 h-12 rounded-xl lg:hidden bg-gradient-to-br from-primary to-secondary opacity-90 font-bold text-base bottom-8 right-8 animate-bounce font-secondary z-40 shadow-hero-button">
+        <a href="https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A"
+          target="_blank">Order Here!</a>
+      </button>
 
     </div>
 
@@ -445,7 +464,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
       </div>
       <button
         class="h-40 lg:h-60 w-full flex justify-center hover:bg-whitey active:bg-whitey transition-all ease-in-out duration-100 group relative cursor-pointer"
-        onclick="window.open('https://wa.me/6281220406031', '_blank')">
+        onclick="window.open('https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A', '_blank')">
 
         <img src="/img/donutLogo.svg" alt=""
           class="w-28 lg:w-40 absolute h-full animate-bounce transition-opacity duration-100 opacity-100 group-active:opacity-0 group-hover:opacity-0">
@@ -539,7 +558,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <div class="flex font-secondary text-md lg:text-xl">
           <button
             class="grow ring-3 rounded-xl cursor-pointer h-14 lg:h-20 hover:bg-whitey active:bg-whitey group transition-all ease-in-out duration-100"
-            onclick="window.open('https://wa.me/6281220406031', '_blank')">
+            onclick="window.open('https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A', '_blank')">
             <span
               class="group-hover:bg-gradient-to-br group-active:bg-gradient-to-br group-hover:from-primary group-active:from-primary group-hover:to-secondary group-active:to-secondary group-hover:bg-clip-text group-active:bg-clip-text group-hover:text-transparent group-active:text-transparent transition-all ease-in-out duration-1000">Bites
               First, Think Later</span>
@@ -574,7 +593,8 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
               <span class="icon-[mdi--instagram] scale-110 cursor-pointer"></span>
               <p>@bluepea.bites</p>
             </a>
-            <a href="https://wa.me/6281220406031" target="_blank" rel="noopener noreferrer"
+            <a href="https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A"
+              target="_blank" rel="noopener noreferrer"
               class="flex items-center gap-2 hover:underline active:underline decoration-wavy decoration-1 underline-offset-2">
               <span class="icon-[ic--baseline-whatsapp] scale-110 cursor-pointer"></span>
               <p>0812-2040-6031</p>
