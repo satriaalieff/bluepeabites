@@ -373,9 +373,9 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
       </section>
 
       <button
-        class="fixed w-28 h-12 rounded-xl lg:hidden bg-gradient-to-br from-primary to-secondary opacity-90 font-bold text-base bottom-8 right-8 animate-bounce font-secondary z-40 shadow-hero-button">
+        class="fixed w-32 h-12 rounded-xl lg:hidden bg-gradient-to-br from-primary to-secondary font-bold text-base bottom-8 right-8 animate-bounce font-secondary z-40 shadow-hero-button leading-4">
         <a href="https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A"
-          target="_blank">Order Here!</a>
+          target="_blank">Pre-order<br>just opened!</a>
       </button>
 
     </div>
