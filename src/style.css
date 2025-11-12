@@ -12,7 +12,7 @@
   --font-secondary: 'ABeeZee', sans-serif;
 
   --shadow-hero-button: 1px 2px 2px rgba(173, 149, 242, 0.5);
-  --shadow-preorder-button: 4px 4px 1px rgba(173, 149, 242, 0.75);
+  --shadow-preorder-button: 3px 3px 1px rgba(173, 149, 242, 0.75);
   --shadow-hero-button-hover: 3px 4px 2px rgba(173, 149, 242, 0.5);
 
   --shadow-products-container: 10px 15px 10px rgba(149, 172, 242, 0.5);
@@ -24,9 +24,6 @@
   --drop-shadow-profile: 2px 3px 1px rgba(0, 0, 0, 0.5);
 }
 
-* {
-  /* border: 0.1px solid red; */
-}
 
 html {
   scroll-behavior: smooth;
