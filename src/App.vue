@@ -1,5 +1,7 @@
 <script setup>
-import { onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
+
+const showPopup = ref(false)
 
 onMounted(() => {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -16,7 +18,15 @@ onMounted(() => {
       history.replaceState(null, null, ' ')
     })
   })
+
+  setTimeout(() => {
+    showPopup.value = true
+  }, 1000)
 })
+
+const closePopup = () => {
+  showPopup.value = false
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   const navbarsmall = document.getElementById("navbarsmall");
@@ -58,8 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(sentinel);
 });
 
-import { ref } from 'vue'
-
 // state reactive buat buka/tutup menu
 const menuOpen = ref(false)
 
@@ -81,7 +89,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
     <!-- hero -->
     <div class="min-w-full min-h-screen bg-gradient-to-br from-secondary to-primary overflow-hidden flex relative">
 
-      <div class="absolute inset-0 bg-[url('/pattern/linePattern.png')] bg-cover bg-top opacity-10 z-0"></div>
+      <div class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-top opacity-10 z-0"></div>
 
       <div
         class="max-w-screen-md lg:max-w-screen-lg w-full m-auto flex flex-col md:flex-row justify-center gap-10 opacity-100 z-10 px-10">
@@ -94,13 +102,13 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
               <h1
                 class="text-whitey font-extrabold text-6xl sm:text-8xl md:text-7xl lg:text-8xl leading-14 sm:leading-20 md:leading-14 lg:leading-18">
                 Bites</h1>
-              <img src="/img/donutLogo.svg" alt="" class="h-auto w-24 lg:w-34">
+              <img src="@/assets/img/donutLogo.svg" alt="" class="h-auto w-24 lg:w-34">
             </div>
           </div>
           <p class="font-secondary text-whitey text-xl sm:text-xl md:text-lg">Naturally Sweet, Beautifully Healthy</p>
         </div>
         <div
-          class="aspect-square w-74 lg:w-88 bg-[url('/img/donutMaskot.png')] bg-center bg-contain bg-no-repeat self-center">
+          class="aspect-square w-74 lg:w-88 bg-[url('@/assets/img/donutMaskot.png')] bg-center bg-contain bg-no-repeat self-center">
         </div>
       </div>
 
@@ -110,7 +118,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
     <div id="navbar"
       class="h-18 sticky top-0 bg-whitey z-50 mt-2 transition-all duration-1000 ease-in-out hidden lg:flex">
       <div class="max-w-screen-lg m-auto w-full flex justify-between px-10 font-secondary">
-        <img src="/img/donutMaskotPurple.png" alt="" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        <img src="@/assets/img/donutMaskotPurple.png" alt="" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
           class="my-auto h-auto w-12 cursor-pointer">
         <div class="flex justify-center items-center gap-12">
           <a href="#product"
@@ -132,7 +140,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
     <!-- bar -->
     <div id="navbarsmall" class="fixed top-4 right-4 z-50 shadow-none lg:hidden">
       <div class="m-auto flex justify-between font-secondary">
-        <img src="/img/donutMaskotPurple.png" alt="menu"
+        <img src="@/assets/img/donutMaskotPurple.png" alt="menu"
           class="w-12 cursor-pointer fixed top-5 right-5 z-50 hover:animate-ping active:animate-ping"
           @click="toggleMenu" />
 
@@ -206,7 +214,8 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
         <div
           class="mt-12 mx-10 rounded-4xl bg-gradient-to-b from-primary to-secondary relative overflow-hidden shadow-products-container">
-          <div class="absolute inset-0 bg-[url('/pattern/linePattern.png')] bg-cover bg-bottom opacity-10 z-0"></div>
+          <div class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
+          </div>
 
           <p class=" text-center font-secondary mt-10 text-5xl">All Variants only 7K</p>
           <div class="grid grid-cols-3 grid-rows-4 px-4 py-20 gap-y-30 gap-x-4">
@@ -256,13 +265,13 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
             </div>
 
             <!-- gambar donut -->
-            <img src="/img/donut3.png" alt=""
+            <img src="@/assets/img/donut3.png" alt=""
               class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:rotate-6 hover:scale-105 hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10">
-            <img src="/img/donut2.png" alt=""
+            <img src="@/assets/img/donut2.png" alt=""
               class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:-rotate-6 hover:scale-105 hover:-rotate-6 transition-all ease-in-out duration-750 top-90 right-10">
-            <img src="/img/donut1.png" alt=""
+            <img src="@/assets/img/donut1.png" alt=""
               class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:rotate-6 hover:scale-105 hover:rotate-6 transition-all ease-in-out duration-750 bottom-64 left-10">
-            <img src="/img/donut4.png" alt=""
+            <img src="@/assets/img/donut4.png" alt=""
               class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:-rotate-6 hover:scale-105 hover:-rotate-6 transition-all ease-in-out duration-750 bottom-4 right-10">
 
             <p class="absolute font-secondary bottom-10 left-10">*Image just an illustration</p>
@@ -281,18 +290,19 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <SwiperSlide class="pb-10">
             <div
               class="mt-12 mx-10 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
-              <div class="absolute inset-0 bg-[url('/pattern/linePattern.png')] bg-cover bg-bottom opacity-10 z-0">
+              <div
+                class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
               </div>
 
               <div class="px-6 py-8 flex flex-col gap-4">
                 <p class="text-4xl text-center">Signature <br>Butterfly</p>
 
-                <img src="/img/donut3.png" alt=""
+                <img src="@/assets/img/donut3.png" alt=""
                   class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
                 <p class="font-secondary text-center text-base">Topping: Telang glaze</p>
 
-                <p class="font-secondary text-center text-4xl font-bold mb-8">Only 7K</p>
+                <p class="font-secondary text-center text-4xl mb-8">Only 7K</p>
               </div>
 
               <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
@@ -304,18 +314,19 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <SwiperSlide class="pb-10">
             <div
               class="mt-12 mx-10 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
-              <div class="absolute inset-0 bg-[url('/pattern/linePattern.png')] bg-cover bg-bottom opacity-10 z-0">
+              <div
+                class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
               </div>
 
               <div class="px-6 py-8 flex flex-col gap-4">
                 <p class="text-4xl text-center">Matcha <br>Butterfly</p>
 
-                <img src="/img/donut2.png" alt=""
+                <img src="@/assets/img/donut2.png" alt=""
                   class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:-rotate-6 group-hover:scale-105 group-hover:-rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
                 <p class="font-secondary text-center text-base">Topping: Matcha glaze, Almond</p>
 
-                <p class="font-secondary text-center text-4xl font-bold mb-8">Only 7K</p>
+                <p class="font-secondary text-center text-4xl mb-8">Only 7K</p>
               </div>
 
               <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
@@ -327,18 +338,19 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <SwiperSlide class="pb-10">
             <div
               class="mt-12 mx-10 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
-              <div class="absolute inset-0 bg-[url('/pattern/linePattern.png')] bg-cover bg-bottom opacity-10 z-0">
+              <div
+                class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
               </div>
 
               <div class="px-6 py-8 flex flex-col gap-4">
                 <p class="text-4xl text-center">Chocolate <br>Butterfly</p>
 
-                <img src="/img/donut4.png" alt=""
+                <img src="@/assets/img/donut4.png" alt=""
                   class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
                 <p class="font-secondary text-center text-base">Topping: Chocolate glaze, Regal</p>
 
-                <p class="font-secondary text-center text-4xl font-bold mb-8">Only 7K</p>
+                <p class="font-secondary text-center text-4xl mb-8">Only 7K</p>
               </div>
 
               <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
@@ -350,19 +362,21 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <SwiperSlide class="pb-10">
             <div
               class="mt-12 mx-10 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
-              <div class="absolute inset-0 bg-[url('/pattern/linePattern.png')] bg-cover bg-bottom opacity-10 z-0">
+              <div
+                class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
               </div>
+              <div class="absolute inset-0 bg-blackey opacity-50 z-30"></div>
 
               <div class="px-6 py-8 flex flex-col gap-4">
                 <p class="text-4xl text-center">Lemon <br>Butterfly</p>
 
                 <!-- gambar donut -->
-                <img src="/img/donut1.png" alt=""
-                  class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
+                <img src="@/assets/img/donut1.png" alt=""
+                  class="aspect-auto w-80 z-20 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
                 <p class="font-secondary text-center text-base">Topping: Pistachio</p>
 
-                <p class="font-secondary text-center text-4xl font-bold mb-8">Only 7K</p>
+                <p class="font-secondary text-center text-4xl mb-8">Only 7K</p>
               </div>
 
               <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
@@ -375,9 +389,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
       <button
         class="fixed w-32 h-12 rounded-xl lg:hidden border border-primary bg-whitey font-bold text-base bottom-8 right-8 animate-bounce font-secondary z-40 shadow-preorder-button leading-4"
         onclick="window.open('https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A', '_blank')">
-
         <p class="text-primary">Pre-order<br>just opened!</p>
-
       </button>
 
     </div>
@@ -398,12 +410,13 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <!--  -->
         <div
           class="bg-whitey rounded-2xl py-6 px-6 flex flex-col gap-2 lg:gap-4 relative shadow-reasons active:shadow-reasons-hover active:-translate-0.5 hover:shadow-reasons-hover hover:-translate-0.5 transition-all ease-in-out duration-300 cursor-default hover:z-40">
-          <div class="absolute inset-0 bg-[url('/pattern/linePatternPurple.png')] bg-cover bg-center opacity-10 z-0">
+          <div
+            class="absolute inset-0 bg-[url('@/assets/pattern/linePatternPurple.png')] bg-cover bg-center opacity-5 z-0">
           </div>
-          <img src="/img/reasonHealthy.png" alt=""
+          <img src="@/assets/img/reasonHealthy.png" alt=""
             class="absolute aspect-auto w-20 -top-6 -right-8.5 rotate-12 drop-shadow-xs/50 lg:hidden">
 
-          <img src="/img/reasonHealthy.png" alt=""
+          <img src="@/assets/img/reasonHealthy.png" alt=""
             class="absolute aspect-auto w-28 -top-6 -left-11 -rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Healthy <br>Indulgence</p>
@@ -414,12 +427,13 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <!--  -->
         <div
           class="bg-whitey rounded-2xl py-6 px-6 flex flex-col gap-2 lg:gap-4 relative shadow-reasons active:shadow-reasons-hover active:-translate-0.5 hover:shadow-reasons-hover hover:-translate-0.5 transition-all ease-in-out duration-300 cursor-default hover:z-40">
-          <div class="absolute inset-0 bg-[url('/pattern/linePatternPurple.png')] bg-cover bg-center opacity-10 z-0">
+          <div
+            class="absolute inset-0 bg-[url('@/assets/pattern/linePatternPurple.png')] bg-cover bg-center opacity-5 z-0">
           </div>
-          <img src="/img/reasonBlue.png" alt=""
+          <img src="@/assets/img/reasonBlue.png" alt=""
             class="absolute aspect-auto w-20 -top-6 -left-7 -rotate-12 drop-shadow-xs/50 lg:hidden">
 
-          <img src="/img/reasonBlue.png" alt=""
+          <img src="@/assets/img/reasonBlue.png" alt=""
             class="absolute aspect-auto w-24 -top-9 -right-9 -rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Blue Magic <br>Aesthetic</p>
@@ -430,12 +444,13 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <!--  -->
         <div
           class="bg-whitey rounded-2xl py-6 px-6 flex flex-col gap-2 lg:gap-4 relative shadow-reasons active:shadow-reasons-hover active:-translate-0.5 hover:shadow-reasons-hover hover:-translate-0.5 transition-all ease-in-out duration-300 cursor-default hover:z-40">
-          <div class="absolute inset-0 bg-[url('/pattern/linePatternPurple.png')] bg-cover bg-center opacity-10 z-0">
+          <div
+            class="absolute inset-0 bg-[url('@/assets/pattern/linePatternPurple.png')] bg-cover bg-center opacity-5 z-0">
           </div>
-          <img src="/img/reasonPrice.png" alt=""
+          <img src="@/assets/img/reasonPrice.png" alt=""
             class="absolute aspect-auto w-24 -top-9 -right-8 rotate-12 drop-shadow-xs/50 lg:hidden">
 
-          <img src="/img/reasonPrice.png" alt=""
+          <img src="@/assets/img/reasonPrice.png" alt=""
             class="absolute aspect-auto w-30 -top-11 -left-16 -rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Student-Friendly <br>Price</p>
@@ -445,12 +460,13 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <!--  -->
         <div
           class="bg-whitey rounded-2xl py-6 px-6 flex flex-col gap-2 lg:gap-4 relative shadow-reasons active:shadow-reasons-hover active:-translate-0.5 hover:shadow-reasons-hover hover:-translate-0.5 transition-all ease-in-out duration-300 cursor-default">
-          <div class="absolute inset-0 bg-[url('/pattern/linePatternPurple.png')] bg-cover bg-center opacity-10 z-0">
+          <div
+            class="absolute inset-0 bg-[url('@/assets/pattern/linePatternPurple.png')] bg-cover bg-center opacity-5 z-0">
           </div>
-          <img src="/img/reasonLocal.png" alt=""
+          <img src="@/assets/img/reasonLocal.png" alt=""
             class="absolute aspect-auto w-18 -top-4 -left-6 -rotate-12 drop-shadow-xs/50 lg:hidden">
 
-          <img src="/img/reasonLocal.png" alt=""
+          <img src="@/assets/img/reasonLocal.png" alt=""
             class="absolute aspect-auto w-22 -top-6 -right-6 rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Local <br>Production</p>
@@ -473,10 +489,10 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         class="h-40 lg:h-60 w-full flex justify-center hover:bg-whitey active:bg-whitey transition-all ease-in-out duration-100 group relative cursor-pointer"
         onclick="window.open('https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A', '_blank')">
 
-        <img src="/img/donutLogo.svg" alt=""
+        <img src="@/assets/img/donutLogo.svg" alt=""
           class="w-28 lg:w-40 absolute h-full animate-bounce transition-opacity duration-100 opacity-100 group-active:opacity-0 group-hover:opacity-0">
 
-        <img src="/img/logoPurple.svg" alt=""
+        <img src="@/assets/img/logoPurple.svg" alt=""
           class="w-28 lg:w-40 absolute h-full animate-bounce transition-opacity duration-100 opacity-0 group-active:opacity-100 group-hover:opacity-100" />
 
         <p
@@ -501,7 +517,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <!--  -->
         <div
           class="flex flex-col lg:row-start-1 lg:row-span-2 bg-whitey rounded-2xl text-blackey justify-center px-6 py-4 text-center gap-4 shadow-md/50 cursor-default hover:scale-y-105 lg:hover:scale-y-110 active:scale-y-105 hover:bg-secondary active:bg-secondary hover:text-whitey active:text-whitey hover:inset-ring-whitey active:inset-ring-whitey hover:inset-ring-2 active:inset-ring-2 inset-ring-0 transition-all ease-in-out duration-150">
-          <img src="/img/gina.png" alt="" class="aspect-auto drop-shadow-profile w-30 self-center">
+          <img src="@/assets/img/gina.png" alt="" class="aspect-auto drop-shadow-profile w-30 self-center">
 
           <p class=" font-semibold text-lg underline decoration-wavy decoration-1 underline-offset-6">Gina</p>
           <p class="text-sm">Founder & General Coordinator</p>
@@ -510,7 +526,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <!--  -->
         <div
           class="flex flex-col lg:row-start-2 lg:row-span-2 bg-whitey rounded-2xl text-blackey justify-center px-6 py-4 text-center gap-4 shadow-md/50 cursor-default hover:scale-y-105 lg:hover:scale-y-110 active:scale-y-105 hover:bg-secondary active:bg-secondary hover:text-whitey active:text-whitey hover:inset-ring-whitey active:inset-ring-whitey hover:inset-ring-2 active:inset-ring-2 inset-ring-0 transition-all ease-in-out duration-150">
-          <img src="/img/sandra.png" alt="" class="aspect-auto drop-shadow-profile w-18 self-center">
+          <img src="@/assets/img/sandra.png" alt="" class="aspect-auto drop-shadow-profile w-18 self-center">
 
           <p class=" font-semibold text-lg underline decoration-wavy decoration-1 underline-offset-6">Sandra</p>
           <p class="text-sm">Marketing & Social Media</p>
@@ -519,7 +535,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <!--  -->
         <div
           class="flex flex-col lg:row-start-1 lg:row-span-2 bg-whitey rounded-2xl text-blackey justify-center px-6 py-4 text-center gap-4 shadow-md/50 cursor-default hover:scale-y-105 lg:hover:scale-y-110 active:scale-y-105 hover:bg-secondary active:bg-secondary hover:text-whitey active:text-whitey hover:inset-ring-whitey active:inset-ring-whitey hover:inset-ring-2 active:inset-ring-2 inset-ring-0 transition-all ease-in-out duration-150">
-          <img src="/img/myBaddieGueh.png" alt="" class="aspect-auto drop-shadow-profile w-24 self-center">
+          <img src="@/assets/img/myBaddieGueh.png" alt="" class="aspect-auto drop-shadow-profile w-24 self-center">
 
           <p class=" font-semibold text-lg underline decoration-wavy decoration-1 underline-offset-6">Farah</p>
           <p class="text-sm">Finance & Administration</p>
@@ -528,7 +544,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <!--  -->
         <div
           class="flex flex-col lg:row-start-2 lg:row-span-2 bg-whitey rounded-2xl text-blackey justify-center px-6 py-4 text-center gap-4 shadow-md/50 cursor-default hover:scale-y-105 lg:hover:scale-y-110 active:scale-y-105 hover:bg-secondary active:bg-secondary hover:text-whitey active:text-whitey hover:inset-ring-whitey active:inset-ring-whitey hover:inset-ring-2 active:inset-ring-2 inset-ring-0 transition-all ease-in-out duration-150">
-          <img src="/img/rizka.png" alt="" class="aspect-auto drop-shadow-profile w-28 self-center">
+          <img src="@/assets/img/rizka.png" alt="" class="aspect-auto drop-shadow-profile w-28 self-center">
 
           <p class=" font-semibold text-lg underline decoration-wavy decoration-1 underline-offset-6">Rizka</p>
           <p class="text-sm">Production Manager</p>
@@ -537,7 +553,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <!--  -->
         <div
           class="flex flex-col lg:row-start-1 lg:row-span-2 bg-whitey rounded-2xl text-blackey justify-center px-6 py-4 text-center gap-4 shadow-md/50 cursor-default hover:scale-y-105 lg:hover:scale-y-110 active:scale-y-105 hover:bg-secondary active:bg-secondary hover:text-whitey active:text-whitey hover:inset-ring-whitey active:inset-ring-whitey hover:inset-ring-2 active:inset-ring-2 inset-ring-0 transition-all ease-in-out duration-150">
-          <img src="/img/dini.png" alt="" class="aspect-auto drop-shadow-profile w-24 self-center">
+          <img src="@/assets/img/dini.png" alt="" class="aspect-auto drop-shadow-profile w-24 self-center">
 
           <p class=" font-semibold text-lg underline decoration-wavy decoration-1 underline-offset-6">Dini</p>
           <p class="text-sm">Supply Chain & Logistics</p>
@@ -546,7 +562,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <!--  -->
         <div
           class="flex flex-col lg:row-start-2 lg:row-span-2 bg-whitey rounded-2xl text-blackey justify-center px-6 py-4 text-center gap-4 shadow-md/50 cursor-default hover:scale-y-105 lg:hover:scale-y-110 active:scale-y-105 hover:bg-secondary active:bg-secondary hover:text-whitey active:text-whitey hover:inset-ring-whitey active:inset-ring-whitey hover:inset-ring-2 active:inset-ring-2 inset-ring-0 transition-all ease-in-out duration-150">
-          <img src="/img/cazie.png" alt="" class="aspect-auto drop-shadow-profile w-20 self-center">
+          <img src="@/assets/img/cazie.png" alt="" class="aspect-auto drop-shadow-profile w-20 self-center">
 
           <p class=" font-semibold text-lg underline decoration-wavy decoration-1 underline-offset-6">Cazie</p>
           <p class="text-sm">Customer Service & Sales</p>
@@ -613,6 +629,20 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <p>©2025 BluePea Bites</p>
           <p>Naturally Sweet, Beautifully Healthy</p>
         </div>
+      </div>
+    </div>
+
+    <div id="promo-popup"
+      class="fixed top-1/2 left-1/2 -translate-x-1/2 bg-whitey z-50 w-2/3 rounded-2xl px-2 py-4 text-blackey font-secondary flex flex-col justify-center items-center gap-2 text-base shadow-promo transition ease-in-out duration-2000 md:hidden"
+      :class="showPopup ? '-translate-y-1/2 opacity-100' : 'translate-y-full opacity-0'">
+
+      <h1 class="">Limited Promo</h1>
+      <img src="@/assets/img/promo.jpg" alt="" class="rounded-xl">
+
+      <div class="flex gap-4 mt-2">
+        <button class="text-primary border border-primary px-4 rounded" @click="closePopup">Close</button>
+        <button class="text-whitey bg-primary px-4 rounded"
+          onclick="window.open('https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A', '_blank')">Order</button>
       </div>
     </div>
 
