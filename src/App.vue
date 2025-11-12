@@ -133,7 +133,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
     <div id="navbarsmall" class="fixed top-4 right-4 z-50 shadow-none lg:hidden">
       <div class="m-auto flex justify-between font-secondary">
         <img src="/img/donutMaskotPurple.png" alt="menu"
-          class="w-12 cursor-pointer fixed top-5 right-5 z-50 hover:animate-spin active:animate-spin"
+          class="w-12 cursor-pointer fixed top-5 right-5 z-50 hover:animate-ping active:animate-ping"
           @click="toggleMenu" />
 
         <!-- Overlay Menu -->
@@ -280,7 +280,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <!-- Slide 1 -->
           <SwiperSlide class="pb-10">
             <div
-              class="mt-12 mx-10 rounded-4xl bg-gradient-to-b from-primary to-secondary relative overflow-hidden shadow-products-container group">
+              class="mt-12 mx-10 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
               <div class="absolute inset-0 bg-[url('/pattern/linePattern.png')] bg-cover bg-bottom opacity-10 z-0">
               </div>
 
@@ -303,7 +303,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <!-- Slide 2 -->
           <SwiperSlide class="pb-10">
             <div
-              class="mt-12 mx-10 rounded-4xl bg-gradient-to-b from-primary to-secondary relative overflow-hidden shadow-products-container group">
+              class="mt-12 mx-10 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
               <div class="absolute inset-0 bg-[url('/pattern/linePattern.png')] bg-cover bg-bottom opacity-10 z-0">
               </div>
 
@@ -326,7 +326,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <!-- Slide 3 -->
           <SwiperSlide class="pb-10">
             <div
-              class="mt-12 mx-10 rounded-4xl bg-gradient-to-b from-primary to-secondary relative overflow-hidden shadow-products-container group">
+              class="mt-12 mx-10 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
               <div class="absolute inset-0 bg-[url('/pattern/linePattern.png')] bg-cover bg-bottom opacity-10 z-0">
               </div>
 
@@ -349,7 +349,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <!-- Slide 4 -->
           <SwiperSlide class="pb-10">
             <div
-              class="mt-12 mx-10 rounded-4xl bg-gradient-to-b from-primary to-secondary relative overflow-hidden shadow-products-container group">
+              class="mt-12 mx-10 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
               <div class="absolute inset-0 bg-[url('/pattern/linePattern.png')] bg-cover bg-bottom opacity-10 z-0">
               </div>
 
