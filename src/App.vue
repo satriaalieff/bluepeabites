@@ -292,7 +292,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
                 <p class="font-secondary text-center text-base">Topping: Telang glaze</p>
 
-                <p class="font-secondary text-center text-4xl font-bold mb-8">7K</p>
+                <p class="font-secondary text-center text-4xl font-bold mb-8">Only 7K</p>
               </div>
 
               <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
@@ -315,7 +315,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
                 <p class="font-secondary text-center text-base">Topping: Matcha glaze, Almond</p>
 
-                <p class="font-secondary text-center text-4xl font-bold mb-8">7K</p>
+                <p class="font-secondary text-center text-4xl font-bold mb-8">Only 7K</p>
               </div>
 
               <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
@@ -338,7 +338,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
                 <p class="font-secondary text-center text-base">Topping: Chocolate glaze, Regal</p>
 
-                <p class="font-secondary text-center text-4xl font-bold mb-8">7K</p>
+                <p class="font-secondary text-center text-4xl font-bold mb-8">Only 7K</p>
               </div>
 
               <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
@@ -362,7 +362,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
                 <p class="font-secondary text-center text-base">Topping: Pistachio</p>
 
-                <p class="font-secondary text-center text-4xl font-bold mb-8">7K</p>
+                <p class="font-secondary text-center text-4xl font-bold mb-8">Only 7K</p>
               </div>
 
               <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
