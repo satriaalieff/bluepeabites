@@ -632,6 +632,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
       </div>
     </div>
 
+
     <div id="promo-popup"
       class="fixed top-1/2 left-1/2 -translate-x-1/2 bg-whitey z-50 w-2/3 md:w-1/2 rounded-2xl px-2 py-4 text-blackey font-secondary flex flex-col justify-center items-center gap-2 text-base shadow-promo transition ease-in-out duration-2000 lg:hidden"
       :class="showPopup ? '-translate-y-1/2 opacity-100' : 'translate-y-full opacity-0'">
