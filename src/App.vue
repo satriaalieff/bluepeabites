@@ -289,7 +289,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <!-- Slide 1 -->
           <SwiperSlide class="pb-10">
             <div
-              class="mt-12 mx-10 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
+              class="mt-12 mx-10 md:mx-32 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
               <div
                 class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
               </div>
@@ -313,7 +313,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <!-- Slide 2 -->
           <SwiperSlide class="pb-10">
             <div
-              class="mt-12 mx-10 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
+              class="mt-12 mx-10 md:mx-32 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
               <div
                 class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
               </div>
@@ -337,7 +337,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <!-- Slide 3 -->
           <SwiperSlide class="pb-10">
             <div
-              class="mt-12 mx-10 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
+              class="mt-12 mx-10 md:mx-32 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
               <div
                 class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
               </div>
@@ -361,7 +361,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           <!-- Slide 4 -->
           <SwiperSlide class="pb-10">
             <div
-              class="mt-12 mx-10 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
+              class="mt-12 mx-10 md:mx-32 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
               <div
                 class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
               </div>
@@ -387,7 +387,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
       </section>
 
       <button
-        class="fixed w-32 h-12 rounded-xl lg:hidden border border-primary bg-whitey font-bold text-base bottom-8 right-8 animate-bounce font-secondary z-40 shadow-preorder-button leading-4"
+        class="fixed w-32 md:w-46 h-12 md:h-18 rounded-xl lg:hidden border border-primary bg-whitey font-bold text-base md:text-2xl bottom-8 right-8 animate-bounce font-secondary z-40 shadow-preorder-button leading-4 md:leading-6"
         onclick="window.open('https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A', '_blank')">
         <p class="text-primary">Pre-order<br>just opened!</p>
       </button>
@@ -634,15 +634,15 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 
 
     <div id="promo-popup"
-      class="fixed top-1/2 left-1/2 -translate-x-1/2 bg-whitey z-50 w-2/3 md:w-1/2 rounded-2xl px-2 py-4 text-blackey font-secondary flex flex-col justify-center items-center gap-2 text-base shadow-promo transition ease-in-out duration-2000 lg:hidden"
+      class="fixed top-1/2 left-1/2 -translate-x-1/2 bg-whitey z-50 w-2/3 md:w-1/2 rounded-2xl px-2 py-4 text-blackey font-secondary flex flex-col justify-center items-center gap-2 text-lg md:text-xl shadow-promo transition ease-in-out duration-2000 lg:hidden"
       :class="showPopup ? '-translate-y-1/2 opacity-100' : 'translate-y-full opacity-0'">
 
       <h1 class="">Limited Promo</h1>
       <img src="@/assets/img/promo.jpg" alt="" class="rounded-xl">
 
       <div class="flex gap-4 mt-2">
-        <button class="text-primary border border-primary px-4 rounded" @click="closePopup">Close</button>
-        <button class="text-whitey bg-primary px-4 rounded"
+        <button class="text-primary border border-primary px-6 py-1 rounded" @click="closePopup">Close</button>
+        <button class="text-whitey bg-primary px-6 py-1 rounded"
           onclick="window.open('https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A', '_blank')">Order</button>
       </div>
     </div>
