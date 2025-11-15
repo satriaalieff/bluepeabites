@@ -1,7 +1,11 @@
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, onBeforeMount } from 'vue'
 
 const showPopup = ref(false)
+
+onBeforeMount(() => {
+  showPopup.value = false
+})
 
 onMounted(() => {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -22,6 +26,10 @@ onMounted(() => {
   setTimeout(() => {
     showPopup.value = true
   }, 1000)
+
+  setTimeout(() => {
+    showPopup.value = false
+  }, 13000)
 })
 
 const closePopup = () => {
@@ -181,7 +189,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         </h2>
         <div class="text-sm lg:text-base flex flex-col leading-9 lg:leading-6 gap-3 lg:gap-6 text-justify">
           <p>We’re a group of university students who share one simple passion
-            <span class=" font-semibold">'we love desserts, but we care about living healthy too'.</span>
+            <span class=" font-semibold">"we love desserts, but we care about living healthy too".</span>
             We started experimenting with
             <span class="font-semibold">
               butterfly pea flowers,
@@ -194,8 +202,8 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
             that’s not just tasty, but meaningful and full of color.
           </p>
 
-          <p>Each donut is <span class="font-semibold">baked</span> with <span class="font-semibold">natural
-              ingredients</span> and colored with pure butterfly pea extract.
+          <p>Each donut is made with <span class="font-semibold">natural
+              ingredients</span> and colored with pure <span class="font-semibold">butterfly pea</span> extract.
             Every bite is a blend of soft texture, gentle herbal aroma,
             and natural sweetness.</p>
         </div>
@@ -387,9 +395,9 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
       </section>
 
       <button
-        class="fixed w-32 md:w-46 h-12 md:h-18 rounded-xl lg:hidden border border-primary bg-whitey font-bold text-base md:text-2xl bottom-8 right-8 animate-bounce font-secondary z-40 shadow-preorder-button leading-4 md:leading-6"
+        class="fixed w-32 md:w-46 h-12 md:h-18 rounded-xl lg:hidden border border-secondary bg-whitey font-bold text-base md:text-2xl bottom-8 right-8 animate-bounce font-secondary z-40 shadow-preorder-button leading-4 md:leading-6"
         onclick="window.open('https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A', '_blank')">
-        <p class="text-primary">Pre-order<br>just opened!</p>
+        <p class="text-secondary">Pre-order<br>just opened!</p>
       </button>
 
     </div>
@@ -420,7 +428,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
             class="absolute aspect-auto w-28 -top-6 -left-11 -rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Healthy <br>Indulgence</p>
-          <p class=" text-justify text-xs lg:text-sm z-10">Low sugar, preservative free, and baked for a lighter treat
+          <p class=" text-justify text-xs lg:text-sm z-10">Low sugar, preservative free, and made for a lighter treat
           </p>
         </div>
 
@@ -632,9 +640,9 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
       </div>
     </div>
 
-
+    <!-- promo pop up potrait -->
     <div id="promo-popup"
-      class="fixed top-1/2 left-1/2 -translate-x-1/2 bg-whitey z-50 w-2/3 md:w-1/2 rounded-2xl px-2 py-4 text-blackey font-secondary flex flex-col justify-center items-center gap-2 text-lg md:text-xl shadow-promo transition ease-in-out duration-2000 lg:hidden"
+      class="fixed top-1/2 left-1/2 -translate-x-1/2 bg-whitey z-50 w-2/3 sm:w-1/2 md:w-2/5 lg:hidden rounded-2xl px-2 py-4 text-blackey font-secondary flex flex-col justify-center items-center gap-2 text-lg md:text-xl shadow-promo transition ease-in-out duration-2000"
       :class="showPopup ? '-translate-y-1/2 opacity-100' : 'translate-y-full opacity-0'">
 
       <h1 class="">Limited Promo</h1>
