@@ -226,63 +226,46 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           </div>
 
           <p class=" text-center font-secondary mt-10 text-5xl">All Variants only 7K</p>
-          <div class="grid grid-cols-3 grid-rows-4 px-4 py-20 gap-y-30 gap-x-4">
+          <div class="grid grid-cols-3 grid-rows-3 px-4 py-32 gap-y-36 gap-x-4 mt-4 mb-4">
 
-            <div class="col-span-2 bg-whitey rounded-2xl h-30 ml-40 flex z-10 shadow-product-desc">
-              <div
-                class="text-primary font-secondary m-auto pr-4 pl-46 flex flex-col justify-center items-center gap-2">
+            <p class="text-5xl self-center text-right row-start-1 col-start-1">Signature <br>Butterfly</p>
+            <div class="col-span-1 bg-whitey rounded-2xl h-30 flex z-10 shadow-product-desc">
+              <div class="text-primary font-secondary m-auto flex flex-col justify-center items-center gap-2 mr-12">
                 <div class="text-2xl text-center leading-[1.75rem]">
-                  Blue beauty with <span class="font-semibold">almond</span> and <span class="font-semibold">chia</span>
-                  seed topping
-                </div>
-              </div>
-            </div>
-            <p class="text-5xl self-center">Signature <br>Butterfly</p>
-
-            <p class="text-5xl self-center text-right">Matcha <br>Butterfly</p>
-            <div class="col-span-2 bg-whitey rounded-2xl h-30 mr-40 flex z-10 shadow-product-desc">
-              <div
-                class="text-primary font-secondary m-auto pl-4 pr-46 flex flex-col justify-center items-center gap-2">
-                <div class="text-2xl text-center leading-[1.75rem]">
-                  A classic matcha with grated <span class="font-semibold">coconut</span> and <span
-                    class="font-semibold">chia</span>
+                  Blue beauty with <span class="font-semibold">telang glaze</span> and <span
+                    class="font-semibold">crumbs</span>
                 </div>
               </div>
             </div>
 
-            <div class=" col-span-2 bg-whitey rounded-2xl h-30 ml-40 flex z-10 shadow-product-desc">
+            <div class="col-span-1 row-start-2 col-start-2 bg-whitey rounded-2xl h-30 flex z-10 shadow-product-desc">
               <div
-                class="text-secondary font-secondary m-auto pr-4 pl-44 flex flex-col justify-center items-center gap-1.5">
+                class="text-primary font-secondary m-auto flex flex-col justify-center items-center gap-2 ml-14">
                 <div class="text-2xl text-center leading-[1.75rem]">
-                  A fresh mix of <span class="font-semibold">lemongrass</span> and <span
-                    class="font-semibold">pistachio</span>
+                  A classic <span class="font-semibold">matcha glazed</span> with grated and <span
+                    class="font-semibold">almond</span>
                 </div>
               </div>
             </div>
-            <p class="text-5xl self-center">Lemon <br>Butterfly</p>
+            <p class="text-5xl self-center row-start-2 col-start-3">Matcha <br>Butterfly</p>
 
-            <p class="text-5xl self-center text-right">Chocolate <br>Butterfly</p>
-            <div class="col-span-2 bg-whitey rounded-2xl h-30 mr-40 flex z-10 shadow-product-desc">
-              <div
-                class="text-secondary font-secondary m-auto pl-6 pr-47 flex flex-col justify-center items-center gap-2">
+            <p class="text-5xl self-center text-right row-start-3 col-start-1">Chocolate <br>Butterfly</p>
+            <div class="col-span-1 row-start-3 col-start-2 bg-whitey rounded-2xl h-30 flex z-10 shadow-product-desc">
+              <div class="text-secondary font-secondary m-auto flex flex-col justify-center items-center gap-2 mr-16 ml-2">
                 <div class="text-2xl text-center leading-[1.75rem]">
-                  Deep <span class="font-semibold">chocolate</span> flavor meets <span class="font-semibold">butterfly
-                    pea</span>
+                  Deep <span class="font-semibold">chocolate glazed</span> meets <span class="font-semibold">regal crumbs</span>
                 </div>
               </div>
             </div>
 
             <!-- gambar donut -->
-            <img src="@/assets/img/donut3.png" alt=""
-              class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:rotate-6 hover:scale-105 hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10">
-            <img src="@/assets/img/donut2.png" alt=""
-              class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:-rotate-6 hover:scale-105 hover:-rotate-6 transition-all ease-in-out duration-750 top-90 right-10">
-            <img src="@/assets/img/donut1.png" alt=""
-              class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:rotate-6 hover:scale-105 hover:rotate-6 transition-all ease-in-out duration-750 bottom-64 left-10">
-            <img src="@/assets/img/donut4.png" alt=""
-              class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:-rotate-6 hover:scale-105 hover:-rotate-6 transition-all ease-in-out duration-750 bottom-4 right-10">
+            <img src="@/assets/img/donutSignature.png" alt=""
+              class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:rotate-6 hover:scale-105 hover:rotate-6 transition-all ease-in-out duration-750 top-32 right-16">
+            <img src="@/assets/img/donutMatcha.png" alt=""
+              class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:-rotate-6 hover:scale-105 hover:-rotate-6 transition-all ease-in-out duration-750 top-100 left-16">
+            <img src="@/assets/img/donutChoco.png" alt=""
+              class="absolute aspect-auto w-80 z-40 cursor-default active:scale-105 active:-rotate-6 hover:scale-105 hover:-rotate-6 transition-all ease-in-out duration-750 bottom-8 right-16">
 
-            <p class="absolute font-secondary bottom-10 left-10">*Image just an illustration</p>
             <p class="absolute font-secondary bottom-5 left-10">*Available by pre-order only</p>
           </div>
         </div>
@@ -295,9 +278,9 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
           :autoplay="{ delay: 3500, disableOnInteraction: false }" pagination class="mySwiper w-full">
 
           <!-- Slide 1 -->
-          <SwiperSlide class="pb-10">
+          <SwiperSlide class="pb-12">
             <div
-              class="mt-12 mx-10 md:mx-32 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
+              class="mt-12 mx-10 md:mx-40 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
               <div
                 class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
               </div>
@@ -305,23 +288,22 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
               <div class="px-6 py-8 flex flex-col gap-4">
                 <p class="text-4xl text-center">Signature <br>Butterfly</p>
 
-                <img src="@/assets/img/donut3.png" alt=""
-                  class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
+                <img src="@/assets/img/donutSignature.png" alt=""
+                  class="aspect-auto w-56 z-40 cursor-default group-active:rotate-16 group-hover:rotate-16 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
-                <p class="font-secondary text-center text-base">Topping: Telang glaze</p>
+                <p class="font-secondary text-center text-base">Topping: Telang crumbs</p>
 
-                <p class="font-secondary text-center text-4xl mb-8">Only 7K</p>
+                <p class="font-secondary text-center text-4xl mb-4">Only 7K</p>
               </div>
 
-              <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
               <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
             </div>
           </SwiperSlide>
 
           <!-- Slide 2 -->
-          <SwiperSlide class="pb-10">
+          <SwiperSlide class="pb-12">
             <div
-              class="mt-12 mx-10 md:mx-32 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
+              class="mt-12 mx-10 md:mx-40 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
               <div
                 class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
               </div>
@@ -329,23 +311,22 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
               <div class="px-6 py-8 flex flex-col gap-4">
                 <p class="text-4xl text-center">Matcha <br>Butterfly</p>
 
-                <img src="@/assets/img/donut2.png" alt=""
-                  class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:-rotate-6 group-hover:scale-105 group-hover:-rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
+                <img src="@/assets/img/donutMatcha.png" alt=""
+                  class="aspect-auto w-56 z-40 cursor-default group-active:rotate-16 group-hover:rotate-16 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
-                <p class="font-secondary text-center text-base">Topping: Matcha glaze, Almond</p>
+                <p class="font-secondary text-center text-base">Topping: Almond</p>
 
-                <p class="font-secondary text-center text-4xl mb-8">Only 7K</p>
+                <p class="font-secondary text-center text-4xl mb-4">Only 7K</p>
               </div>
 
-              <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
               <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
             </div>
           </SwiperSlide>
 
           <!-- Slide 3 -->
-          <SwiperSlide class="pb-10">
+          <SwiperSlide class="pb-12">
             <div
-              class="mt-12 mx-10 md:mx-32 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
+              class="mt-12 mx-10 md:mx-40 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
               <div
                 class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
               </div>
@@ -353,52 +334,26 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
               <div class="px-6 py-8 flex flex-col gap-4">
                 <p class="text-4xl text-center">Chocolate <br>Butterfly</p>
 
-                <img src="@/assets/img/donut4.png" alt=""
-                  class="aspect-auto w-80 z-40 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
+                <img src="@/assets/img/donutChoco.png" alt=""
+                  class="aspect-auto w-56 z-40 cursor-default group-active:rotate-16 group-hover:rotate-16 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
 
-                <p class="font-secondary text-center text-base">Topping: Chocolate glaze, Regal</p>
+                <p class="font-secondary text-center text-base">Topping: Regal</p>
 
-                <p class="font-secondary text-center text-4xl mb-8">Only 7K</p>
+                <p class="font-secondary text-center text-4xl mb-4">Only 7K</p>
               </div>
 
-              <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
               <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
             </div>
           </SwiperSlide>
 
-          <!-- Slide 4 -->
-          <SwiperSlide class="pb-10">
-            <div
-              class="mt-12 mx-10 md:mx-32 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
-              <div
-                class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
-              </div>
-              <div class="absolute inset-0 bg-blackey opacity-50 z-30"></div>
-
-              <div class="px-6 py-8 flex flex-col gap-4">
-                <p class="text-4xl text-center">Lemon <br>Butterfly</p>
-
-                <!-- gambar donut -->
-                <img src="@/assets/img/donut1.png" alt=""
-                  class="aspect-auto w-80 z-20 cursor-default group-active:scale-105 group-active:rotate-6 group-hover:scale-105 group-hover:rotate-6 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
-
-                <p class="font-secondary text-center text-base">Topping: Pistachio</p>
-
-                <p class="font-secondary text-center text-4xl mb-8">Only 7K</p>
-              </div>
-
-              <p class="absolute font-secondary text-xs bottom-6 left-6">*Image just an illustration</p>
-              <p class="absolute font-secondary text-xs bottom-2 left-6">*Not available yet</p>
-            </div>
-          </SwiperSlide>
         </Swiper>
       </section>
 
-      <button
+      <!-- <button
         class="fixed w-32 md:w-46 h-12 md:h-18 rounded-xl lg:hidden border border-secondary bg-whitey font-bold text-base md:text-2xl bottom-8 right-8 animate-bounce font-secondary z-40 shadow-preorder-button leading-4 md:leading-6"
         onclick="window.open('https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A', '_blank')">
         <p class="text-secondary">Pre-order<br>just opened!</p>
-      </button>
+      </button> -->
 
     </div>
 
@@ -641,7 +596,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
     </div>
 
     <!-- promo pop up potrait -->
-    <div id="promo-popup"
+    <!-- <div id="promo-popup"
       class="fixed top-1/2 left-1/2 -translate-x-1/2 bg-whitey z-50 w-2/3 sm:w-1/2 md:w-2/5 lg:hidden rounded-2xl px-2 py-4 text-blackey font-secondary flex flex-col justify-center items-center gap-2 text-lg md:text-xl shadow-promo transition ease-in-out duration-2000"
       :class="showPopup ? '-translate-y-1/2 opacity-100' : 'translate-y-full opacity-0'">
 
@@ -653,7 +608,7 @@ import { Pagination, Navigation, Autoplay } from 'swiper/modules'
         <button class="text-whitey bg-primary px-6 py-1 rounded"
           onclick="window.open('https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A', '_blank')">Order</button>
       </div>
-    </div>
+    </div> -->
 
   </div>
 </template>
