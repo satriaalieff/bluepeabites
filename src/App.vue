@@ -263,6 +263,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
       <Splide :options="{
         type: 'loop',
         drag: 'free',
+        focus: 'center',
         arrows: false,
         perPage: 1.5,
         pagination: false,
@@ -282,7 +283,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
           },
         },
         autoScroll: {
-          speed: 1,
+          speed: 1, autoStart: true,
         },
       }" :extensions="{ AutoScroll }" aria-label="Review">
 
@@ -431,6 +432,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
       <Splide :options="{
         type: 'loop',
         drag: 'free',
+        focus: 'center',
         arrows: false,
         perPage: 1.5,
         pagination: false,
@@ -450,7 +452,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
           },
         },
         autoScroll: {
-          speed: -1,
+          speed: -1, autoStart: true,
         },
       }" :extensions="{ AutoScroll }" aria-label="Review" class="mt-2">
 
