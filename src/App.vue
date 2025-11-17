@@ -282,7 +282,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
           },
         },
         autoScroll: {
-          speed: 1, pauseOnHover: true, pauseOnFocus: true,
+          speed: 1,
         },
       }" :extensions="{ AutoScroll }" aria-label="Review">
 
@@ -450,7 +450,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
           },
         },
         autoScroll: {
-          speed: -1, pauseOnHover: true, pauseOnFocus: true,
+          speed: -1,
         },
       }" :extensions="{ AutoScroll }" aria-label="Review" class="mt-2">
 
