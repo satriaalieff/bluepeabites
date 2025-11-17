@@ -263,7 +263,6 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
       <Splide :options="{
         type: 'loop',
         drag: 'free',
-        focus: 'center',
         arrows: false,
         perPage: 1.5,
         pagination: false,
@@ -432,7 +431,6 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
       <Splide :options="{
         type: 'loop',
         drag: 'free',
-        focus: 'center',
         arrows: false,
         perPage: 1.5,
         pagination: false,
