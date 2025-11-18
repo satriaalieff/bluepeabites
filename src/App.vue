@@ -140,9 +140,9 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
           <a href="#team"
             class="text-blackey text-lg hover:underline hover:underline-offset-6 decoration-wavy decoration-1">Team</a>
           <button
-            class="w-24 h-10 rounded-xl bg-primary text-lg shadow-hero-button hover:-translate-0.5 hover:shadow-hero-button-hover transition-all duration-50 cursor-pointer">
-            <a href="https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A"
-              target="_blank">Order</a>
+            class="w-24 h-10 rounded-xl bg-primary text-lg shadow-hero-button hover:-translate-0.5 hover:shadow-hero-button-hover transition-all duration-50 cursor-pointer"
+            onclick="window.open('https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A', '_blank')">
+            Order
           </button>
 
         </div>
@@ -186,7 +186,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 
     <!--  -->
-    <div class="text-blackey font-secondary mt-20 lg:mt-40 flex">
+    <div class="text-blackey font-secondary mt-20 lg:mt-28 flex">
       <div class="flex flex-col m-auto max-w-screen-sm lg:max-w-screen-lg w-full px-10 lg:px-40">
         <h2 class="font-primary mb-6 lg:mb-8 text-3xl lg:text-4xl font-semibold">The Story Behind Our
           <span class="bg-gradient-to-br from-primary to-secondary bg-clip-text text-transparent">Blue</span>
@@ -216,7 +216,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
     <!-- batch 1 -->
     <div
-      class="w-full py-10 bg-primary bg-cover bg-center mt-20 relative font-secondary text-whitey flex flex-col items-center justify-center gap-12">
+      class="w-full py-10 bg-primary bg-cover bg-center mt-20 lg:mt-32 relative font-secondary text-whitey flex flex-col items-center justify-center gap-12">
       <div class="bg-whitey h-20 w-0.5 absolute top-10 left-1/2 rounded-full xl:hidden"></div>
       <div class="bg-whitey h-0.5 w-74 md:w-96 absolute top-36 rounded-full xl:hidden"></div>
 
@@ -749,7 +749,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 
     <!-- why choose us -->
-    <div class=" bg-gradient-to-b from-whitey to-secondary mt-40 lg:mt-40 px-5 flex flex-col">
+    <div class=" bg-gradient-to-b from-whitey to-secondary mt-40 lg:mt-60 px-5 flex flex-col">
       <p id="reason"
         class="font-primary text-blackey text-center text-4xl lg:text-5xl font-semibold scroll-mt-20 lg:scroll-mt-30">
         Why Choose
