@@ -88,6 +88,7 @@ import { Icon } from "@iconify/vue";
 import { Splide, SplideSlide } from '@splidejs/vue-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+
 </script>
 
 <template>
@@ -147,7 +148,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
     <div class="fixed top-8 left-0 right-0 flex px-10 md:px-40 z-50 lg:hidden">
       <div
-        class="container m-auto font-secondary backdrop-blur-[1px] bg-whitey/90 text-blackey flex justify-evenly py-4 px-4 rounded-full border border-blackey/10">
+        class="container m-auto font-secondary backdrop-blur-[3px] bg-whitey/75 text-blackey flex justify-evenly py-4 px-4 rounded-full border border-blackey/10">
         <a href="#product"
           class="hover:font-bold active:font-bold hover:underline hover:underline-offset-4 decoration-wavy decoration-1 active:underline active:underline-offset-4">Product</a>
         <a href="#reason"
@@ -229,6 +230,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
       </div>
     </div>
 
+    <!-- REVIEWWWWWWW -->
     <div class="flex flex-col mt-20">
       <p class="text-blackey text-center text-2xl mb-4">What Our Customer Says</p>
 
@@ -569,6 +571,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
       </Splide>
 
     </div>
+    <!-- REVIEWWWWW -->
 
     <!-- products header -->
     <div class="flex flex-col">
