@@ -147,7 +147,7 @@ const reviews = [
       </div>
     </div>
 
-    <div class="fixed top-8 left-0 right-0 flex px-10 md:px-40 z-50 lg:hidden">
+    <div class="fixed bottom-8 left-0 right-0 flex px-10 md:px-40 z-50 lg:hidden">
       <div
         class="container m-auto font-secondary backdrop-blur-[3px] bg-whitey/75 text-blackey flex justify-evenly py-4 px-4 rounded-full border border-blackey/10">
         <a href="#product"
