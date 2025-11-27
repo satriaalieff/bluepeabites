@@ -149,13 +149,14 @@ const reviews = [
 
     <div class="fixed bottom-8 left-0 right-0 flex px-10 md:px-40 z-50 lg:hidden">
       <div
-        class="container m-auto font-secondary backdrop-blur-[3px] bg-whitey/75 text-blackey flex justify-evenly py-4 px-4 rounded-full border border-blackey/10">
+        class="container m-auto font-secondary backdrop-blur-[2px] bg-whitey/75 text-blackey flex justify-evenly py-4 rounded-full border border-blackey/10"
+        style="-webkit-backdrop-filter: blur(2px); backdrop-filter: blur(2px); will-change: backdrop-filter;">
         <a href="#product"
-          class="hover:font-bold active:font-bold hover:underline hover:underline-offset-4 decoration-wavy decoration-1 active:underline active:underline-offset-4">Product</a>
+          class="hover:underline hover:underline-offset-4 decoration-wavy decoration-1 active:underline active:underline-offset-4">Product</a>
         <a href="#reason"
-          class="hover:font-bold active:font-bold hover:underline hover:underline-offset-4 decoration-wavy decoration-1 active:underline active:underline-offset-4">BluePea</a>
+          class="hover:underline hover:underline-offset-4 decoration-wavy decoration-1 active:underline active:underline-offset-4">BluePea</a>
         <a href="#team"
-          class="hover:font-bold active:font-bold hover:underline hover:underline-offset-4 decoration-wavy decoration-1 active:underline active:underline-offset-4">Team</a>
+          class="hover:underline hover:underline-offset-4 decoration-wavy decoration-1 active:underline active:underline-offset-4">Team</a>
       </div>
     </div>
 
@@ -309,7 +310,7 @@ const reviews = [
     <!-- products header -->
     <div class="flex flex-col overflow-hidden">
       <h2 id="product"
-        class="text-primary mx-auto text-4xl lg:text-6xl mt-32 scroll-mt-28 lg:scroll-mt-30 font-semibold lg:mt-40">Our
+        class="text-primary mx-auto text-4xl lg:text-6xl mt-32 scroll-mt-16 lg:scroll-mt-30 font-semibold lg:mt-40">Our
         Products
       </h2>
 
@@ -454,7 +455,7 @@ const reviews = [
     <!-- why choose us -->
     <div class=" bg-gradient-to-b from-whitey to-secondary mt-32 lg:mt-60 px-5 flex flex-col">
       <p id="reason"
-        class="font-primary text-blackey text-center text-4xl lg:text-5xl font-semibold scroll-mt-28 lg:scroll-mt-30">
+        class="font-primary text-blackey text-center text-4xl lg:text-5xl font-semibold scroll-mt-16 lg:scroll-mt-30">
         Why Choose
         BluePea Bites</p>
       <p class="font-secondary text-blackey text-center text-sm lg:text-base mt-4">Because our donuts are made not just
@@ -563,7 +564,7 @@ const reviews = [
     <!-- team -->
     <div class=" bg-gradient-to-b from-secondary to-primary pt-20 lg:pt-60 px-10 relative lg:flex lg:flex-col">
 
-      <p id="team" class=" text-center text-3xl lg:text-4xl scroll-mt-28 lg:scroll-mt-30">The Sweet Souls Behind BluePea
+      <p id="team" class=" text-center text-3xl lg:text-4xl scroll-mt-16 lg:scroll-mt-30">The Sweet Souls Behind BluePea
         Bites</p>
       <p class=" text-center font-secondary text-sm lg:text-lg mt-2">Meet the team that makes BluePea Bites possible</p>
 
