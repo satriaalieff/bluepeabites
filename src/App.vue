@@ -473,7 +473,7 @@ const reviews = [
             class="absolute aspect-auto w-28 -top-6 -left-11 -rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Healthy <br>Indulgence</p>
-          <p class=" text-justify text-xs lg:text-sm z-10">Low sugar, preservative free, and made for a lighter treat
+          <p class=" text-center text-xs lg:text-sm z-10">Low sugar, preservative free, and made for a lighter treat
           </p>
         </div>
 
@@ -490,7 +490,7 @@ const reviews = [
             class="absolute aspect-auto w-24 -top-9 -right-9 -rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Blue Magic <br>Aesthetic</p>
-          <p class=" text-justify text-xs lg:text-sm z-10">Naturally blue from butterfly pea extract, beautiful and
+          <p class=" text-center text-xs lg:text-sm z-10">Naturally blue from butterfly pea extract, beautiful and
             beneficial</p>
         </div>
 
@@ -507,7 +507,7 @@ const reviews = [
             class="absolute aspect-auto w-30 -top-11 -left-16 -rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Student-Friendly <br>Price</p>
-          <p class=" text-justify text-xs lg:text-sm z-10">Premium quality that fits a student’s budget</p>
+          <p class=" text-center text-xs lg:text-sm z-10">Premium quality that fits a student’s budget</p>
         </div>
 
         <!--  -->
@@ -523,7 +523,7 @@ const reviews = [
             class="absolute aspect-auto w-22 -top-6 -right-6 rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Local <br>Production</p>
-          <p class=" text-justify text-xs lg:text-sm z-10">Crafted by Indonesian students, made from local ingredients
+          <p class=" text-center text-xs lg:text-sm z-10">Crafted by Indonesian students, made from local ingredients
           </p>
         </div>
       </div>
