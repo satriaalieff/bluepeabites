@@ -32,10 +32,6 @@ onMounted(() => {
   }, 13000)
 })
 
-const closePopup = () => {
-  showPopup.value = false
-}
-
 document.addEventListener("DOMContentLoaded", () => {
   const navbarsmall = document.getElementById("navbarsmall");
   const sentinel = document.getElementById("navbar-sentinel");
@@ -134,11 +130,11 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
           class="my-auto h-auto w-12 cursor-pointer">
         <div class="flex justify-center items-center gap-12">
           <a href="#product"
-            class="text-blackey text-lg hover:underline hover:underline-offset-6 decoration-wavy decoration-1">Products</a>
+            class="text-blackey text-lg active:underline active:underline-offset-6 hover:underline hover:underline-offset-6 decoration-wavy decoration-1">Products</a>
           <a href="#reason"
-            class="text-blackey text-lg hover:underline hover:underline-offset-6 decoration-wavy decoration-1">BluePea</a>
+            class="text-blackey text-lg active:underline active:underline-offset-6 hover:underline hover:underline-offset-6 decoration-wavy decoration-1">BluePea</a>
           <a href="#team"
-            class="text-blackey text-lg hover:underline hover:underline-offset-6 decoration-wavy decoration-1">Team</a>
+            class="text-blackey text-lg active:underline active:underline-offset-6 hover:underline hover:underline-offset-6 decoration-wavy decoration-1">Team</a>
           <button
             class="w-24 h-10 rounded-xl bg-primary text-lg shadow-hero-button hover:-translate-0.5 hover:shadow-hero-button-hover transition-all duration-50 cursor-pointer"
             onclick="window.open('https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A', '_blank')">
@@ -149,41 +145,17 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
       </div>
     </div>
 
-    <!-- bar -->
-    <div id="navbarsmall" class="fixed top-4 right-4 z-50 shadow-none lg:hidden">
-      <div class="m-auto flex justify-between font-secondary">
-        <img src="@/assets/img/donutMaskotPurple.png" alt="menu"
-          class="w-12 cursor-pointer fixed top-5 right-5 z-50 hover:animate-ping active:animate-ping"
-          @click="toggleMenu" />
-
-        <!-- Overlay Menu -->
-        <div
-          class="fixed inset-0 flex flex-col justify-center items-center gap-20 transition-all duration-500 ease-in-out overflow-hidden"
-          :class="menuOpen ? 'translate-y-0' : '-translate-y-full'">
-          <!-- Lapisan blur di belakang -->
-          <div class="absolute inset-0 bg-gradient-to-br from-primary/95 to-secondary/95"></div>
-
-          <div class="relative z-10 flex flex-col items-center gap-24">
-            <a href="#product"
-              class="text-whitey font-semibold text-3xl hover:underline hover:underline-offset-6 active:underline active:underline-offset-6 decoration-whitey decoration-wavy decoration-1"
-              @click="toggleMenu">Products</a>
-            <a href="#reason"
-              class="text-whitey font-semibold text-3xl hover:underline hover:underline-offset-6 active:underline active:underline-offset-6 decoration-whitey decoration-wavy decoration-1"
-              @click="toggleMenu">BluePea</a>
-            <a href="#team"
-              class="text-whitey font-semibold text-3xl hover:underline hover:underline-offset-6 active:underline active:underline-offset-6 decoration-whitey decoration-wavy decoration-1"
-              @click="toggleMenu">Team</a>
-
-            <button
-              class="w-24 h-10 rounded-xl bg-primary text-lg shadow-hero-button hover:-translate-0.5 hover:shadow-hero-button-hover transition-all duration-50 cursor-pointer hidden">
-              <a href="https://wa.me/6281220406031?text=FORMAT%20ORDER%20%E2%80%93%20Donat%20Sehat%20Bunga%20Telang%20Blue%20Pea%20Bites%0A%0AHai%2C%20terima%20kasih%20sudah%20tertarik%20dengan%20donat%20sehat%20kami!%0ASilakan%20isi%20format%20berikut%20untuk%20melakukan%20preorder%0A%0ADATA%20PEMESAN%0ANama%3A%0ANo.%20HP%20%2F%20WhatsApp%3A%0AAlamat%20Lengkap%3A%0AMetode%20Pengiriman%3A%20(Pick%20Up%20%2F%20Delivery)%3A%0A%0APILIHAN%20PRODUK%0A-%20Signature%20Butterfly%0A-%20Chocolate%20Butterfly%0A-%20Matcha%20Butterfly%0A%0AJumlah%20Pesanan%20dan%20Varian%20Rasanya%3A%0A%0AMETODE%20PEMBAYARAN%0ATransfer%20ke%3A%0A-%20BCA%0A5776396890%20an.%20Rizka%20Puspa%20Etsuno%0A-%20Gopay%0A087772839737%20an.%20Allysandra%20Rafeyfa%20A"
-                target="_blank">Order</a>
-            </button>
-          </div>
-        </div>
+    <div class="fixed top-16 left-0 right-0 flex px-10 md:px-40 z-50 lg:hidden">
+      <div
+        class="container m-auto font-secondary backdrop-blur-[1px] bg-whitey/90 text-blackey flex justify-evenly py-4 px-4 rounded-full border border-blackey/10">
+        <a href="#product"
+          class="hover:font-bold active:font-bold hover:underline hover:underline-offset-4 decoration-wavy decoration-1 active:underline active:underline-offset-4">Product</a>
+        <a href="#reason"
+          class="hover:font-bold active:font-bold hover:underline hover:underline-offset-4 decoration-wavy decoration-1 active:underline active:underline-offset-4">BluePea</a>
+        <a href="#team"
+          class="hover:font-bold active:font-bold hover:underline hover:underline-offset-4 decoration-wavy decoration-1 active:underline active:underline-offset-4">Team</a>
       </div>
     </div>
-
 
     <!--  -->
     <div class="text-blackey font-secondary mt-20 lg:mt-28 flex">
@@ -601,7 +573,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
     <!-- products header -->
     <div class="flex flex-col">
       <h2 id="product"
-        class="text-primary mx-auto text-4xl lg:text-6xl mt-32 scroll-mt-20 lg:scroll-mt-30 font-semibold lg:mt-40">Our
+        class="text-primary mx-auto text-4xl lg:text-6xl mt-32 scroll-mt-36 lg:scroll-mt-30 font-semibold lg:mt-40">Our
         Products
       </h2>
 
@@ -751,7 +723,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
     <!-- why choose us -->
     <div class=" bg-gradient-to-b from-whitey to-secondary mt-40 lg:mt-60 px-5 flex flex-col">
       <p id="reason"
-        class="font-primary text-blackey text-center text-4xl lg:text-5xl font-semibold scroll-mt-20 lg:scroll-mt-30">
+        class="font-primary text-blackey text-center text-4xl lg:text-5xl font-semibold scroll-mt-36 lg:scroll-mt-30">
         Why Choose
         BluePea Bites</p>
       <p class="font-secondary text-blackey text-center text-sm lg:text-base mt-4">Because our donuts are made not just
@@ -860,7 +832,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
     <!-- team -->
     <div class=" bg-gradient-to-b from-secondary to-primary pt-30 lg:pt-60 px-10 relative lg:flex lg:flex-col">
 
-      <p id="team" class=" text-center text-3xl lg:text-4xl scroll-mt-20 lg:scroll-mt-30">The Sweet Souls Behind BluePea
+      <p id="team" class=" text-center text-3xl lg:text-4xl scroll-mt-36 lg:scroll-mt-30">The Sweet Souls Behind BluePea
         Bites</p>
       <p class=" text-center font-secondary text-sm lg:text-lg mt-2">Meet the team that makes BluePea Bites possible</p>
 
