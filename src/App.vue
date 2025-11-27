@@ -1,99 +1,103 @@
 <script setup>
-import { ref, onMounted, onBeforeMount } from 'vue'
-
-const showPopup = ref(false)
-
-onBeforeMount(() => {
-  showPopup.value = false
-})
-
-onMounted(() => {
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      e.preventDefault()
-      const targetId = anchor.getAttribute('href').substring(1)
-      const target = document.getElementById(targetId)
-
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth' })
-      }
-
-      // Hilangkan # dari URL (hash)
-      history.replaceState(null, null, ' ')
-    })
-  })
-
-  setTimeout(() => {
-    showPopup.value = true
-  }, 1000)
-
-  setTimeout(() => {
-    showPopup.value = false
-  }, 13000)
-})
-
-document.addEventListener("DOMContentLoaded", () => {
-  const navbarsmall = document.getElementById("navbarsmall");
-  const sentinel = document.getElementById("navbar-sentinel");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const entry = entries[0];
-      if (!entry.isIntersecting) {
-        navbarsmall.classList.add("shadow-md");
-      } else {
-        navbarsmall.classList.remove("shadow-md");
-      }
-    },
-    { rootMargin: "-1px 0px 0px 0px", threshold: 0 }
-  );
-
-  observer.observe(sentinel);
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-  const navbar = document.getElementById("navbar");
-  const sentinel = document.getElementById("navbar-sentinel");
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      const entry = entries[0];
-      if (!entry.isIntersecting) {
-        // artinya navbar udah nempel (sticky aktif)
-        navbar.classList.add("shadow-md");
-      } else {
-        // masih belum nempel di atas
-        navbar.classList.remove("shadow-md");
-      }
-    },
-    { rootMargin: "-1px 0px 0px 0px", threshold: 0 }
-  );
-
-  observer.observe(sentinel);
-});
-
-// state reactive buat buka/tutup menu
-const menuOpen = ref(false)
-
-const toggleMenu = () => {
-  menuOpen.value = !menuOpen.value
-}
-
-import { Swiper, SwiperSlide } from 'swiper/vue'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
-import { Pagination, Navigation, Autoplay } from 'swiper/modules'
 import { Icon } from "@iconify/vue";
-import { Splide, SplideSlide } from '@splidejs/vue-splide';
-import '@splidejs/splide/dist/css/splide.min.css';
-import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
+import { Swiper, SwiperSlide } from 'swiper/vue'
+import { Autoplay, EffectCards, FreeMode } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/free-mode'
+import 'swiper/css/effect-cards'
 
+const modules = [Autoplay, FreeMode, EffectCards]
+
+const reviews = [
+  {
+    name: 'Ameera',
+    rating: 5,
+    review: 'Donutnya yummy banget!',
+    variants: 'Signature, Matcha'
+  },
+  {
+    name: 'Furi',
+    rating: 5,
+    review: 'Manisnya pas banget',
+    variants: 'Signature, Matcha'
+  },
+  {
+    name: 'Keysa',
+    rating: 5,
+    review: 'So fluffy omg omg',
+    variants: 'Matcha, Chocolate'
+  },
+  {
+    name: 'Satria',
+    rating: 5,
+    review: 'JCO sama Dunkin kalah ini mah',
+    variants: 'Signature, Matcha, Chocolate'
+  },
+  {
+    name: 'Salsa',
+    rating: 5,
+    review: 'Jujur ini donut paling enak di nangor',
+    variants: 'Matcha'
+  },
+  {
+    name: 'Ersa',
+    rating: 5,
+    review: 'Sweet but not too much',
+    variants: 'Signature, Matcha, Chocolate'
+  },
+  {
+    name: 'Vicensa',
+    rating: 5,
+    review: 'Demi apapun matcha nya enak bangetttt',
+    variants: 'Matcha'
+  },
+  {
+    name: 'Rifky',
+    rating: 5,
+    review: 'Jujur enak, mau lagi pls',
+    variants: 'Matcha'
+  },
+  {
+    name: 'Selly',
+    rating: 5,
+    review: 'Enak banget donutnya best!',
+    variants: 'Chocolate'
+  },
+  {
+    name: 'Safira',
+    rating: 5,
+    review: 'Selain donutnya enak, penjualnya juga seru seru',
+    variants: 'Matcha'
+  },
+  {
+    name: 'Yudha',
+    rating: 5,
+    review: 'Donut favorit baru',
+    variants: 'Signature, Matcha, Chocolate'
+  },
+  {
+    name: 'Alwan',
+    rating: 5,
+    review: 'Donutnya lucu, rasanya nagih',
+    variants: 'Matcha, Chocolate'
+  },
+  {
+    name: 'Riva',
+    rating: 5,
+    review: 'KAPAN OPEN PO KEDUA? MAU!!',
+    variants: 'Signature, Matcha, Chocolate'
+  },
+  {
+    name: 'Luthvia',
+    rating: 5,
+    review: 'Packagingnya terlucu dari yang lain',
+    variants: 'Signature'
+  },
+];
 </script>
 
 <template>
-  <div class="font-primary box-border bg-whitey text-whitey">
-
+  <div class="font-primary box-border bg-whitey text-whitey scroll-smooth">
 
     <!-- hero -->
     <div class="min-w-full min-h-screen bg-gradient-to-br from-secondary to-primary overflow-hidden flex relative">
@@ -120,12 +124,9 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
           class="aspect-square w-74 lg:w-88 bg-[url('@/assets/img/donutMaskot.png')] bg-center bg-contain bg-no-repeat self-center">
         </div>
       </div>
-
     </div>
 
-    <div id="navbar-sentinel"></div>
-    <div id="navbar"
-      class="h-18 sticky top-0 bg-whitey z-50 mt-2 transition-all duration-1000 ease-in-out hidden lg:flex">
+    <div id="navbar" class="h-18 sticky top-0 bg-whitey z-50 hidden lg:flex shadow-sm">
       <div class="max-w-screen-lg m-auto w-full flex justify-between px-10 font-secondary">
         <img src="@/assets/img/donutMaskotPurple.png" alt="" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
           class="my-auto h-auto w-12 cursor-pointer">
@@ -204,11 +205,11 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
         </div>
         <div class="text-center hidden xl:block">
           <div class="flex justify-center items-center">
-            <Icon icon="material-symbols:star-outline-rounded" width="64" height="64" />
-            <Icon icon="material-symbols:star-outline-rounded" width="64" height="64" />
-            <Icon icon="material-symbols:star-outline-rounded" width="64" height="64" />
-            <Icon icon="material-symbols:star-outline-rounded" width="64" height="64" />
-            <Icon icon="material-symbols:star-outline-rounded" width="64" height="64" />
+            <Icon icon="material-symbols:star-rounded" width="64" height="64" />
+            <Icon icon="material-symbols:star-rounded" width="64" height="64" />
+            <Icon icon="material-symbols:star-rounded" width="64" height="64" />
+            <Icon icon="material-symbols:star-rounded" width="64" height="64" />
+            <Icon icon="material-symbols:star-rounded" width="64" height="64" />
           </div>
           <p class="text-sm">5 Star Rating</p>
         </div>
@@ -220,11 +221,11 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
       <div class="text-center xl:hidden">
         <div class="flex justify-center items-center">
-          <Icon icon="material-symbols:star-outline-rounded" width="64" height="64" />
-          <Icon icon="material-symbols:star-outline-rounded" width="64" height="64" />
-          <Icon icon="material-symbols:star-outline-rounded" width="64" height="64" />
-          <Icon icon="material-symbols:star-outline-rounded" width="64" height="64" />
-          <Icon icon="material-symbols:star-outline-rounded" width="64" height="64" />
+          <Icon icon="material-symbols:star-rounded" width="64" height="64" />
+          <Icon icon="material-symbols:star-rounded" width="64" height="64" />
+          <Icon icon="material-symbols:star-rounded" width="64" height="64" />
+          <Icon icon="material-symbols:star-rounded" width="64" height="64" />
+          <Icon icon="material-symbols:star-rounded" width="64" height="64" />
         </div>
         <p class="text-sm">5 Star Rating</p>
       </div>
@@ -234,347 +235,79 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
     <div class="flex flex-col mt-20">
       <p class="text-blackey text-center text-2xl mb-4">What Our Customer Says</p>
 
-      <Splide :options="{
-        type: 'loop',
-        drag: 'free',
-        arrows: false,
-        perPage: 1.5,
-        pagination: false,
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {
-            perPage: 3,
-          },
-          1024: {
-            perPage: 4,
-          },
-          1280: {
-            perPage: 5,
-          },
-          1536: {
-            perPage: 6,
-          },
-        },
-        autoScroll: {
-          speed: 1, autoStart: true,
-        },
-      }" :extensions="{ AutoScroll }" aria-label="Review">
-
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Ameera</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
+      <section class="container m-auto">
+        <Swiper :modules="modules" :slides-per-view="1.5" :space-between="0" :loop="true" :free-mode="true"
+          :speed="5000" :autoplay="{ delay: 0 }" :breakpoints="{
+            768: {
+              slidesPerView: 3
+            },
+            1024: {
+              slidesPerView: 4
+            },
+            1280: {
+              slidesPerView: 5
+            },
+            1536: {
+              slidesPerView: 6
+            }
+          }">
+          <SwiperSlide v-for="(review, index) in reviews.slice(0, 7)" :key="index" class="py-2">
+            <div
+              class="w-56 shadow border border-secondary/25 rounded-xl mt-4 text-blackey font-secondary text-sm flex flex-col p-4 gap-2">
+              <div class="flex justify-between h-full">
+                <p class="font-bold">{{ review.name }}</p>
+                <div class="flex justify-center items-center">
+                  <Icon icon="material-symbols:star-rounded" width="20" height="20" style="color: #95acf2"
+                    v-for="(n, index) in 5" :key="index" />
+                </div>
               </div>
+
+              <p class="mt-4">{{ review.review }}</p>
+
+              <p class="text-xs opacity-50">{{ review.variants }}</p>
+
             </div>
+          </SwiperSlide>
+        </Swiper>
 
-            <p>Donutnya yummy banget!</p>
-
-            <p class="text-xs">Signature, Matcha</p>
-
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Furi</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
+        <Swiper :modules="modules" :slides-per-view="1.5" :space-between="0" :loop="true" :free-mode="true"
+          :speed="5000" :autoplay="{ delay: 0, reverseDirection: true }" :breakpoints="{
+            768: {
+              slidesPerView: 3
+            },
+            1024: {
+              slidesPerView: 4
+            },
+            1280: {
+              slidesPerView: 5
+            },
+            1536: {
+              slidesPerView: 6
+            }
+          }">
+          <SwiperSlide v-for="(review, index) in reviews.slice(7)" :key="index" class="py-2">
+            <div
+              class="w-56 shadow border border-secondary/25 rounded-xl mt-4 text-blackey font-secondary text-sm flex flex-col p-4 gap-2">
+              <div class="flex justify-between h-full">
+                <p class="font-bold">{{ review.name }}</p>
+                <div class="flex justify-center items-center">
+                  <Icon icon="material-symbols:star-rounded" width="20" height="20" style="color: #95acf2"
+                    v-for="(n, index) in 5" :key="index" />
+                </div>
               </div>
+
+              <p class="mt-4">{{ review.review }}</p>
+
+              <p class="text-xs opacity-50">{{ review.variants }}</p>
+
             </div>
-
-            <p>Manisnya pas banget</p>
-
-            <p class="text-xs">Signature, Matcha</p>
-
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Keysa</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-              </div>
-            </div>
-
-            <p>So fluffy omg omg</p>
-
-            <p class="text-xs">Mactha, Chocolate</p>
-
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Satria</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-              </div>
-            </div>
-
-            <p>JCO sama Dunkin kalah ini mah</p>
-
-            <p class="text-xs">Signature, Matcha, Chocolate</p>
-
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Salsa</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-              </div>
-            </div>
-
-            <p>Jujur ini donut paling enak di nangor</p>
-
-            <p class="text-xs">Matcha</p>
-
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Ersa</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-              </div>
-            </div>
-
-            <p>Sweet but not too much</p>
-
-            <p class="text-xs">Signature, Matcha, Chocolate</p>
-
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Vicensa</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-              </div>
-            </div>
-
-            <p>Demi apapun matcha nya enak bangetttt</p>
-
-            <p class="text-xs">Matcha</p>
-
-          </div>
-        </SplideSlide>
-      </Splide>
-
-      <Splide :options="{
-        type: 'loop',
-        drag: 'free',
-        arrows: false,
-        perPage: 1.5,
-        pagination: false,
-        mediaQuery: 'min',
-        breakpoints: {
-          768: {
-            perPage: 3,
-          },
-          1024: {
-            perPage: 4,
-          },
-          1280: {
-            perPage: 5,
-          },
-          1536: {
-            perPage: 6,
-          },
-        },
-        autoScroll: {
-          speed: -1, autoStart: true,
-        },
-      }" :extensions="{ AutoScroll }" aria-label="Review" class="mt-2">
-
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Rifky</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-              </div>
-            </div>
-
-            <p>Jujur enak, mau lagi pls</p>
-
-            <p class="text-xs">Matcha</p>
-
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Selly</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-              </div>
-            </div>
-
-            <p>Enak banget donutnya best!</p>
-
-            <p class="text-xs">Chocolate</p>
-
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Safira</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-              </div>
-            </div>
-
-            <p>Selain donutnya enak, penjualnya juga seru seru</p>
-
-            <p class="text-xs">Matcha</p>
-
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Yudha</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-              </div>
-            </div>
-
-            <p>Donut favorit baru</p>
-
-            <p class="text-xs">Signature, Matcha, Chocolate</p>
-
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Alwan</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-              </div>
-            </div>
-
-            <p>Donutnya lucu, rasanya nagih</p>
-
-            <p class="text-xs">Matcha, Chocolate</p>
-
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Riva</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-              </div>
-            </div>
-
-            <p>KAPAN OPEN PO KEDUA? MAU!!</p>
-
-            <p class="text-xs">Signature, Matcha, Chocolate</p>
-
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div
-            class="w-56 border-2 border-primary rounded-xl mt-4 text-blackey font-secondary flex flex-col py-4 px-4 gap-4">
-            <div class="flex justify-between">
-              <p class="font-bold">Luthvia</p>
-              <div class="flex justify-center items-center">
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-                <Icon icon="material-symbols:star-outline-rounded" width="20" height="20" style="color: #95acf2" />
-              </div>
-            </div>
-
-            <p>Packagingnya terlucu dari yang lain</p>
-
-            <p class="text-xs">Signature</p>
-
-          </div>
-        </SplideSlide>
-      </Splide>
-
+          </SwiperSlide>
+        </Swiper>
+      </section>
     </div>
-    <!-- REVIEWWWWW -->
 
     <!-- products header -->
-    <div class="flex flex-col">
+    <div class="flex flex-col overflow-hidden">
       <h2 id="product"
         class="text-primary mx-auto text-4xl lg:text-6xl mt-32 scroll-mt-28 lg:scroll-mt-30 font-semibold lg:mt-40">Our
         Products
@@ -636,81 +369,73 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
       </div>
 
+
       <!-- slider -->
-      <section class="flex lg:hidden">
-        <Swiper :modules="[Pagination, Navigation, Autoplay]" :slides-per-view="1" :space-between="50" :loop="true"
-          :autoplay="{ delay: 3000, disableOnInteraction: false }" pagination class="mySwiper w-full">
-
-          <!-- Slide 1 -->
-          <SwiperSlide class="pb-12">
+      <section class="flex lg:hidden container m-auto">
+        <Swiper :modules="[EffectCards]" :effect="'cards'" :grabCursor="true" class="w-72 md:w-md mt-8" :breakpoints="{
+          768: {
+            cardsEffect: {
+              perSlideOffset: 10,
+              perSlideRotate: 6
+            },
+          }
+        }">
+          <SwiperSlide class="relative bg-linear-to-br from-primary to-secondary rounded-4xl group">
             <div
-              class="mt-12 mx-10 md:mx-40 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
-              <div
-                class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
-              </div>
-
-              <div class="px-6 py-8 flex flex-col gap-4">
-                <p class="text-4xl text-center">Signature <br>Butterfly</p>
-
-                <img src="@/assets/img/donutSignature.png" alt=""
-                  class="aspect-auto w-56 z-40 cursor-default group-active:rotate-16 group-hover:rotate-16 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
-
-                <p class="font-secondary text-center text-base">Topping: Telang crumbs</p>
-
-                <p class="font-secondary text-center text-4xl mb-4">Only 7K</p>
-              </div>
-
-              <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
+              class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 -z-10">
             </div>
+
+            <div class="px-6 py-8 flex flex-col gap-4 md:gap-6 z-50">
+              <p class="text-4xl text-center">Signature <br>Butterfly</p>
+
+              <img src="@/assets/img/donutSignature.png" alt=""
+                class="aspect-auto w-56 md:w-72 z-40 cursor-default group-active:rotate-4 group-hover:rotate-4 group-hover:scale-105 group-active:scale-105 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
+
+              <p class="font-secondary text-center text-base">Topping: Telang crumbs</p>
+
+              <p class="font-secondary text-center text-4xl mb-4 font-semibold">Only 7K</p>
+            </div>
+
+            <p class="absolute font-secondary text-xs bottom-3 md:bottom-4 left-4 md:left-6 font-light">*Available by pre-order only</p>
           </SwiperSlide>
 
-          <!-- Slide 2 -->
-          <SwiperSlide class="pb-12">
+          <SwiperSlide class="relative bg-linear-to-br from-primary to-secondary rounded-4xl group">
             <div
-              class="mt-12 mx-10 md:mx-40 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
-              <div
-                class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
-              </div>
-
-              <div class="px-6 py-8 flex flex-col gap-4 relative">
-                <p class="text-4xl text-center">Matcha <br>Butterfly</p>
-                <p class="absolute top-3 left-1/2 -translate-x-1/2 text-sm font-secondary">Best Seller!</p>
-
-                <img src="@/assets/img/donutMatcha.png" alt=""
-                  class="aspect-auto w-56 z-40 cursor-default group-active:rotate-16 group-hover:rotate-16 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
-
-                <p class="font-secondary text-center text-base">Topping: Almond</p>
-
-                <p class="font-secondary text-center text-4xl mb-4">Only 7K</p>
-              </div>
-
-              <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
+              class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 -z-10">
             </div>
+
+            <div class="px-6 py-8 flex flex-col gap-4 md:gap-6 z-10">
+              <p class="text-4xl text-center">Matcha <br>Butterfly</p>
+
+              <img src="@/assets/img/donutMatcha.png" alt=""
+                class="aspect-auto w-56 md:w-72 z-40 cursor-default group-active:rotate-4 group-hover:rotate-4 group-hover:scale-105 group-active:scale-105 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
+
+              <p class="font-secondary text-center text-base">Topping: Almond</p>
+
+              <p class="font-secondary text-center text-4xl mb-4 font-semibold">Only 7K</p>
+            </div>
+
+            <p class="absolute font-secondary text-xs bottom-3 md:bottom-4 left-4 md:left-6 font-light">*Available by pre-order only</p>
           </SwiperSlide>
 
-          <!-- Slide 3 -->
-          <SwiperSlide class="pb-12">
+          <SwiperSlide class="relative bg-linear-to-br from-primary to-secondary rounded-4xl group">
             <div
-              class="mt-12 mx-10 md:mx-40 rounded-4xl bg-gradient-to-br from-primary to-secondary relative overflow-hidden shadow-products-container group">
-              <div
-                class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 z-0">
-              </div>
-
-              <div class="px-6 py-8 flex flex-col gap-4">
-                <p class="text-4xl text-center">Chocolate <br>Butterfly</p>
-
-                <img src="@/assets/img/donutChoco.png" alt=""
-                  class="aspect-auto w-56 z-40 cursor-default group-active:rotate-16 group-hover:rotate-16 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
-
-                <p class="font-secondary text-center text-base">Topping: Regal</p>
-
-                <p class="font-secondary text-center text-4xl mb-4">Only 7K</p>
-              </div>
-
-              <p class="absolute font-secondary text-xs bottom-2 left-6">*Available by pre-order only</p>
+              class="absolute inset-0 bg-[url('@/assets/pattern/linePattern.png')] bg-cover bg-bottom opacity-5 -z-10">
             </div>
-          </SwiperSlide>
 
+            <div class="px-6 py-8 flex flex-col gap-4 md:gap-6 z-10">
+              <p class="text-4xl text-center">Chocolate <br>Butterfly</p>
+
+              <img src="@/assets/img/donutChoco.png" alt=""
+                class="aspect-auto w-56 md:w-72 z-40 cursor-default group-active:rotate-4 group-hover:rotate-4 group-hover:scale-105 group-active:scale-105 transition-all ease-in-out duration-750 top-30 left-10 drop-shadow-md/25 self-center">
+
+              <p class="font-secondary text-center text-base">Topping: Regal</p>
+
+              <p class="font-secondary text-center text-4xl mb-4 font-semibold">Only 7K</p>
+            </div>
+
+            <p class="absolute font-secondary text-xs bottom-3 md:bottom-4 left-4 md:left-6 font-light">*Available by pre-order only</p>
+          </SwiperSlide>
         </Swiper>
       </section>
 
@@ -724,7 +449,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 
     <!-- why choose us -->
-    <div class=" bg-gradient-to-b from-whitey to-secondary mt-40 lg:mt-60 px-5 flex flex-col">
+    <div class=" bg-gradient-to-b from-whitey to-secondary mt-32 lg:mt-60 px-5 flex flex-col">
       <p id="reason"
         class="font-primary text-blackey text-center text-4xl lg:text-5xl font-semibold scroll-mt-28 lg:scroll-mt-30">
         Why Choose
@@ -833,7 +558,7 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
     </div>
 
     <!-- team -->
-    <div class=" bg-gradient-to-b from-secondary to-primary pt-30 lg:pt-60 px-10 relative lg:flex lg:flex-col">
+    <div class=" bg-gradient-to-b from-secondary to-primary pt-20 lg:pt-60 px-10 relative lg:flex lg:flex-col">
 
       <p id="team" class=" text-center text-3xl lg:text-4xl scroll-mt-28 lg:scroll-mt-30">The Sweet Souls Behind BluePea
         Bites</p>
@@ -978,4 +703,8 @@ import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.swiper-free-mode>.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+</style>
