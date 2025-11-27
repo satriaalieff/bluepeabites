@@ -115,7 +115,7 @@ const reviews = [
               <h1
                 class="text-whitey font-extrabold text-6xl sm:text-8xl md:text-7xl lg:text-8xl leading-14 sm:leading-20 md:leading-14 lg:leading-18">
                 Bites</h1>
-              <img src="@/assets/img/donutLogo.svg" alt="" class="h-auto w-24 lg:w-34">
+              <img src="@/assets/img/donutLogo.svg" alt="" class="h-auto w-24 lg:w-34" loading="lazy">
             </div>
           </div>
           <p class="font-secondary text-whitey text-xl sm:text-xl md:text-lg">Naturally Sweet, Beautifully Healthy</p>
@@ -128,8 +128,8 @@ const reviews = [
 
     <div id="navbar" class="h-18 sticky top-0 bg-whitey z-50 hidden lg:flex shadow-sm">
       <div class="max-w-screen-lg m-auto w-full flex justify-between px-10 font-secondary">
-        <img src="@/assets/img/donutMaskotPurple.png" alt="" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-          class="my-auto h-auto w-12 cursor-pointer">
+        <img src="@/assets/img/donutMaskotPurple.png" loading="lazy" alt=""
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="my-auto h-auto w-12 cursor-pointer">
         <div class="flex justify-center items-center gap-12">
           <a href="#product"
             class="text-blackey text-lg active:underline active:underline-offset-6 hover:underline hover:underline-offset-6 decoration-wavy decoration-1">Products</a>
@@ -396,7 +396,8 @@ const reviews = [
               <p class="font-secondary text-center text-4xl mb-4 font-semibold">Only 7K</p>
             </div>
 
-            <p class="absolute font-secondary text-xs bottom-3 md:bottom-4 left-4 md:left-6 font-light">*Available by pre-order only</p>
+            <p class="absolute font-secondary text-xs bottom-3 md:bottom-4 left-4 md:left-6 font-light">*Available by
+              pre-order only</p>
           </SwiperSlide>
 
           <SwiperSlide class="relative bg-linear-to-br from-primary to-secondary rounded-4xl group">
@@ -415,7 +416,8 @@ const reviews = [
               <p class="font-secondary text-center text-4xl mb-4 font-semibold">Only 7K</p>
             </div>
 
-            <p class="absolute font-secondary text-xs bottom-3 md:bottom-4 left-4 md:left-6 font-light">*Available by pre-order only</p>
+            <p class="absolute font-secondary text-xs bottom-3 md:bottom-4 left-4 md:left-6 font-light">*Available by
+              pre-order only</p>
           </SwiperSlide>
 
           <SwiperSlide class="relative bg-linear-to-br from-primary to-secondary rounded-4xl group">
@@ -434,7 +436,8 @@ const reviews = [
               <p class="font-secondary text-center text-4xl mb-4 font-semibold">Only 7K</p>
             </div>
 
-            <p class="absolute font-secondary text-xs bottom-3 md:bottom-4 left-4 md:left-6 font-light">*Available by pre-order only</p>
+            <p class="absolute font-secondary text-xs bottom-3 md:bottom-4 left-4 md:left-6 font-light">*Available by
+              pre-order only</p>
           </SwiperSlide>
         </Swiper>
       </section>
@@ -466,10 +469,10 @@ const reviews = [
           <div
             class="absolute inset-0 bg-[url('@/assets/pattern/linePatternPurple.png')] bg-cover bg-center opacity-5 z-0">
           </div>
-          <img src="@/assets/img/reasonHealthy.png" alt=""
+          <img src="@/assets/img/reasonHealthy.png" loading="lazy" alt=""
             class="absolute aspect-auto w-20 -top-6 -right-8.5 rotate-12 drop-shadow-xs/50 lg:hidden">
 
-          <img src="@/assets/img/reasonHealthy.png" alt=""
+          <img src="@/assets/img/reasonHealthy.png" loading="lazy" alt=""
             class="absolute aspect-auto w-28 -top-6 -left-11 -rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Healthy <br>Indulgence</p>
@@ -483,10 +486,10 @@ const reviews = [
           <div
             class="absolute inset-0 bg-[url('@/assets/pattern/linePatternPurple.png')] bg-cover bg-center opacity-5 z-0">
           </div>
-          <img src="@/assets/img/reasonBlue.png" alt=""
+          <img src="@/assets/img/reasonBlue.png" loading="lazy" alt=""
             class="absolute aspect-auto w-20 -top-6 -left-7 -rotate-12 drop-shadow-xs/50 lg:hidden">
 
-          <img src="@/assets/img/reasonBlue.png" alt=""
+          <img src="@/assets/img/reasonBlue.png" loading="lazy" alt=""
             class="absolute aspect-auto w-24 -top-9 -right-9 -rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Blue Magic <br>Aesthetic</p>
@@ -500,10 +503,10 @@ const reviews = [
           <div
             class="absolute inset-0 bg-[url('@/assets/pattern/linePatternPurple.png')] bg-cover bg-center opacity-5 z-0">
           </div>
-          <img src="@/assets/img/reasonPrice.png" alt=""
+          <img src="@/assets/img/reasonPrice.png" loading="lazy" alt=""
             class="absolute aspect-auto w-24 -top-9 -right-8 rotate-12 drop-shadow-xs/50 lg:hidden">
 
-          <img src="@/assets/img/reasonPrice.png" alt=""
+          <img src="@/assets/img/reasonPrice.png" loading="lazy" alt=""
             class="absolute aspect-auto w-30 -top-11 -left-16 -rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Student-Friendly <br>Price</p>
@@ -516,10 +519,10 @@ const reviews = [
           <div
             class="absolute inset-0 bg-[url('@/assets/pattern/linePatternPurple.png')] bg-cover bg-center opacity-5 z-0">
           </div>
-          <img src="@/assets/img/reasonLocal.png" alt=""
+          <img src="@/assets/img/reasonLocal.png" loading="lazy" alt=""
             class="absolute aspect-auto w-18 -top-4 -left-6 -rotate-12 drop-shadow-xs/50 lg:hidden">
 
-          <img src="@/assets/img/reasonLocal.png" alt=""
+          <img src="@/assets/img/reasonLocal.png" loading="lazy" alt=""
             class="absolute aspect-auto w-22 -top-6 -right-6 rotate-12 drop-shadow-xs/50 hidden lg:block">
 
           <p class="font-bold text-center text-lg lg:text-xl leading-7 lg:leading-6">Local <br>Production</p>
@@ -570,7 +573,8 @@ const reviews = [
         <!--  -->
         <div
           class="flex flex-col lg:row-start-1 lg:row-span-2 bg-whitey rounded-2xl text-blackey justify-center px-6 py-4 text-center gap-4 shadow-md/50 cursor-default hover:scale-y-105 lg:hover:scale-y-110 active:scale-y-105 hover:bg-secondary active:bg-secondary hover:text-whitey active:text-whitey hover:inset-ring-whitey active:inset-ring-whitey hover:inset-ring-2 active:inset-ring-2 inset-ring-0 transition-all ease-in-out duration-150">
-          <img src="@/assets/img/gina.png" alt="" class="aspect-auto drop-shadow-profile w-30 self-center">
+          <img src="@/assets/img/gina.png" loading="lazy" alt=""
+            class="aspect-auto drop-shadow-profile w-30 self-center">
 
           <p class=" font-semibold text-lg underline decoration-wavy decoration-1 underline-offset-6">Gina</p>
           <p class="text-sm">Founder & General Coordinator</p>
@@ -579,7 +583,8 @@ const reviews = [
         <!--  -->
         <div
           class="flex flex-col lg:row-start-2 lg:row-span-2 bg-whitey rounded-2xl text-blackey justify-center px-6 py-4 text-center gap-4 shadow-md/50 cursor-default hover:scale-y-105 lg:hover:scale-y-110 active:scale-y-105 hover:bg-secondary active:bg-secondary hover:text-whitey active:text-whitey hover:inset-ring-whitey active:inset-ring-whitey hover:inset-ring-2 active:inset-ring-2 inset-ring-0 transition-all ease-in-out duration-150">
-          <img src="@/assets/img/sandra.png" alt="" class="aspect-auto drop-shadow-profile w-18 self-center">
+          <img src="@/assets/img/sandra.png" loading="lazy" alt=""
+            class="aspect-auto drop-shadow-profile w-18 self-center">
 
           <p class=" font-semibold text-lg underline decoration-wavy decoration-1 underline-offset-6">Sandra</p>
           <p class="text-sm">Marketing & Social Media</p>
@@ -588,7 +593,8 @@ const reviews = [
         <!--  -->
         <div
           class="flex flex-col lg:row-start-1 lg:row-span-2 bg-whitey rounded-2xl text-blackey justify-center px-6 py-4 text-center gap-4 shadow-md/50 cursor-default hover:scale-y-105 lg:hover:scale-y-110 active:scale-y-105 hover:bg-secondary active:bg-secondary hover:text-whitey active:text-whitey hover:inset-ring-whitey active:inset-ring-whitey hover:inset-ring-2 active:inset-ring-2 inset-ring-0 transition-all ease-in-out duration-150">
-          <img src="@/assets/img/myBaddieGueh.png" alt="" class="aspect-auto drop-shadow-profile w-24 self-center">
+          <img src="@/assets/img/myBaddieGueh.png" loading="lazy" alt=""
+            class="aspect-auto drop-shadow-profile w-24 self-center">
 
           <p class=" font-semibold text-lg underline decoration-wavy decoration-1 underline-offset-6">Farah</p>
           <p class="text-sm">Finance & Administration</p>
@@ -597,7 +603,8 @@ const reviews = [
         <!--  -->
         <div
           class="flex flex-col lg:row-start-2 lg:row-span-2 bg-whitey rounded-2xl text-blackey justify-center px-6 py-4 text-center gap-4 shadow-md/50 cursor-default hover:scale-y-105 lg:hover:scale-y-110 active:scale-y-105 hover:bg-secondary active:bg-secondary hover:text-whitey active:text-whitey hover:inset-ring-whitey active:inset-ring-whitey hover:inset-ring-2 active:inset-ring-2 inset-ring-0 transition-all ease-in-out duration-150">
-          <img src="@/assets/img/rizka.png" alt="" class="aspect-auto drop-shadow-profile w-28 self-center">
+          <img src="@/assets/img/rizka.png" loading="lazy" alt=""
+            class="aspect-auto drop-shadow-profile w-28 self-center">
 
           <p class=" font-semibold text-lg underline decoration-wavy decoration-1 underline-offset-6">Rizka</p>
           <p class="text-sm">Production Manager</p>
@@ -606,7 +613,8 @@ const reviews = [
         <!--  -->
         <div
           class="flex flex-col lg:row-start-1 lg:row-span-2 bg-whitey rounded-2xl text-blackey justify-center px-6 py-4 text-center gap-4 shadow-md/50 cursor-default hover:scale-y-105 lg:hover:scale-y-110 active:scale-y-105 hover:bg-secondary active:bg-secondary hover:text-whitey active:text-whitey hover:inset-ring-whitey active:inset-ring-whitey hover:inset-ring-2 active:inset-ring-2 inset-ring-0 transition-all ease-in-out duration-150">
-          <img src="@/assets/img/dini.png" alt="" class="aspect-auto drop-shadow-profile w-24 self-center">
+          <img src="@/assets/img/dini.png" loading="lazy" alt=""
+            class="aspect-auto drop-shadow-profile w-24 self-center">
 
           <p class=" font-semibold text-lg underline decoration-wavy decoration-1 underline-offset-6">Dini</p>
           <p class="text-sm">Supply Chain & Logistics</p>
@@ -615,7 +623,8 @@ const reviews = [
         <!--  -->
         <div
           class="flex flex-col lg:row-start-2 lg:row-span-2 bg-whitey rounded-2xl text-blackey justify-center px-6 py-4 text-center gap-4 shadow-md/50 cursor-default hover:scale-y-105 lg:hover:scale-y-110 active:scale-y-105 hover:bg-secondary active:bg-secondary hover:text-whitey active:text-whitey hover:inset-ring-whitey active:inset-ring-whitey hover:inset-ring-2 active:inset-ring-2 inset-ring-0 transition-all ease-in-out duration-150">
-          <img src="@/assets/img/cazie.png" alt="" class="aspect-auto drop-shadow-profile w-20 self-center">
+          <img src="@/assets/img/cazie.png" loading="lazy" alt=""
+            class="aspect-auto drop-shadow-profile w-20 self-center">
 
           <p class=" font-semibold text-lg underline decoration-wavy decoration-1 underline-offset-6">Cazie</p>
           <p class="text-sm">Customer Service & Sales</p>
